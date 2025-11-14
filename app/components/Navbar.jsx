@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import studioinlogo from "../../public/assets/studioinlogo.png"; // Replace with your logo path
+import studioinlogo from "../../public/logos/sinblacl.png"; // Replace with your logo path
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -80,7 +80,7 @@ const Navbar = () => {
             <Image
               src={studioinlogo}
               alt="Studio Logo"
-              className="h-20 md:h-24 lg:h-28 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-3 md:h-24 lg:h-18 w-auto transition-transform duration-300 hover:scale-105"
               priority
             />
           </Link>

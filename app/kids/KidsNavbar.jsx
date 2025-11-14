@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function KidsNavbar() {
@@ -26,9 +27,20 @@ export default function KidsNavbar() {
   return (
     <div className="w-full bg-white border-b shadow-sm sticky top-16 z-40">
       <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between py-4">
-        <h2 className="text-xl font-bold text-purple-700 tracking-wide">
-          Kids Studio.in
-        </h2>
+
+        {/* Logo Section */}
+        <Link href="/kids" className="flex items-center gap-2">
+          <Image
+            src="/logos/kidslogoblack.png"
+            alt="Kids Studio Logo"
+            width={120}
+            height={50}
+            className="object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Nav Links */}
         <nav className="flex flex-wrap gap-6">
           {navItem("/kids", "Home")}
           {navItem("/kids/indoor", "Indoor")}
