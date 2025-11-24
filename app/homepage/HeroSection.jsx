@@ -5,11 +5,11 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // ✅ Import images directly — not via string paths
-import slide1 from "../../public/assets/slide1.jpg";
-import slide2 from "../../public/assets/slide2.jpg";
-import slide3 from "../../public/assets/slide3.jpg";
-import slide4 from "../../public/assets/slide4.jpg";
-import slide5 from "../../public/assets/slide5.jpg";
+import slide1 from "../../public/assets/banner 01.webp";
+import slide2 from "../../public/assets/banner 02.webp";
+import slide3 from "../../public/assets/banner 03.webp";
+import slide4 from "../../public/assets/banner 04.webp";
+import slide5 from "../../public/assets/banner 05.webp";
 
 const slides = [
   {

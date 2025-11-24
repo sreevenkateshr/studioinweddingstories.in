@@ -137,7 +137,7 @@ export default function AboutPage() {
           {/* Image */}
           <div className="flex justify-center">
             <Image
-              src="/assets/founder.webp"
+              src="/assets/founderstudi.in.jpg"
               alt="Manikandan"
               width={256}
               height={256}

@@ -1,8 +1,30 @@
 "use client";
 import React from "react";
-import Link from "next/link"; // ✅ Next.js link
+import Image from "next/image";
+import Link from "next/link";
 
-const imageCount = 18;
+const photos = [
+  "/assets/selectedworks/select work 01.webp",
+  "/assets/selectedworks/select work 13.webp",
+  "/assets/selectedworks/select work 20.webp",
+  "/assets/selectedworks/select work 09.webp",
+  "/assets/selectedworks/select work 177.webp",
+  "/assets/selectedworks/select work 17.webp",
+  "/assets/selectedworks/select work 04.webp",
+  "/assets/selectedworks/select work 19.webp",
+  "/assets/selectedworks/select work 05.webp",
+  "/assets/selectedworks/select work 15.webp",
+  "/assets/selectedworks/select work 02.webp",
+  "/assets/selectedworks/select work 03.webp",
+  "/assets/selectedworks/select work 07.webp",
+  "/assets/selectedworks/select work 166.webp",
+  "/assets/selectedworks/select work 18.webp",
+  "/assets/selectedworks/select work 12.webp",
+  "/assets/selectedworks/select work 10.webp",
+  "/assets/selectedworks/select work 08.webp",
+  "/assets/selectedworks/select work 111.webp",
+  "/assets/selectedworks/select work 14.webp",
+];
 
 export default function SelectedWorks() {
   return (
@@ -11,19 +33,20 @@ export default function SelectedWorks() {
         Selected works
       </h2>
 
-      {/* Masonry-style responsive grid */}
       <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 max-w-7xl mx-auto">
-        {[...Array(imageCount)].map((_, index) => (
-          <img
-            key={index}
-            src={`https://picsum.photos/seed/${index + 1}/500/700`}
-            alt={`photo-${index}`}
-            className="w-full rounded-lg object-cover mb-4 break-inside-avoid shadow filter grayscale hover:grayscale-0 transition duration-500"
-          />
+        {photos.map((src, index) => (
+          <div key={index} className="break-inside-avoid mb-4">
+            <Image
+              src={src}
+              width={500}
+              height={700}
+              alt={`photo-${index}`}
+              className="w-full h-auto rounded-lg object-cover shadow filter grayscale hover:grayscale-0 transition duration-500"
+            />
+          </div>
         ))}
       </div>
 
-      {/* ✅ Next.js Link */}
       <div className="mt-12">
         <Link
           href="/portfolio"

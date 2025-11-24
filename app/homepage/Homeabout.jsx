@@ -1,8 +1,8 @@
 "use client"; // required because it includes a button (interactive)
 import React from "react";
 import Link from "next/link"; // ✅ Correct import
-import img1 from "../../public/assets/homeabout1.jpg";
-import img2 from "../../public/assets/homeabout2.jpg";
+import img1 from "../../public/assets/bride single.webp";
+import img2 from "../../public/assets/collage.webp";
 
 export default function AboutSection() {
   return (
