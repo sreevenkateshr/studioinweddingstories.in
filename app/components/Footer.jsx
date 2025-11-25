@@ -2,8 +2,9 @@
     FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, 
     FaFacebookF, FaInstagram, FaYoutube, FaPinterestP, FaWhatsapp 
   } from "react-icons/fa";
-import studio from "../../public/logos/whitelogo.png";
-
+  
+import Image from "next/image";   // <-- ADD THIS
+import studio from "../../public/logos/sinblacl.png";
   export default function Footer() {
     // Scroll to top function
     const scrollToTop = () => {
@@ -18,7 +19,13 @@ import studio from "../../public/logos/whitelogo.png";
 
             {/* Logo + Contact */}
             <div className="w-full lg:w-1/4 space-y-6">
-<img src={studio} alt="Studio Logo" className="w-56 h-auto" />
+<Image 
+  src={studio} 
+  alt="Studio Logo" 
+  width={220}
+  height={80}
+  className="w-56 h-auto"
+/>
               <div className="space-y-3 text-black-400">
                 <div className="flex items-start gap-3">
                   <FaMapMarkerAlt className="mt-1 text-red-500" />

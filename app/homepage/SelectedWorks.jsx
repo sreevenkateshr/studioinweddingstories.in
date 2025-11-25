@@ -50,7 +50,7 @@ export default function SelectedWorks() {
       <div className="mt-12">
         <Link
           href="/portfolio"
-          className="px-6 py-2 border border-black rounded-full text-sm tracking-wide hover:bg-black hover:text-white transition duration-300 inline-block"
+          className="px-6 py-2 text-black border border-black rounded-full text-sm tracking-wide hover:bg-black hover:text-white transition duration-300 inline-block"
         >
           View Portfolio
         </Link>

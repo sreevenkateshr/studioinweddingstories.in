@@ -1,19 +1,17 @@
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-// };
-
-// export default nextConfig;
-
-/** 
- * 
- * @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "i0.wp.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
         pathname: "**",
       },
     ],

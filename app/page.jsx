@@ -4,7 +4,7 @@ import {
   Homeabout,
   SelectedWorks,
   Homeservices,
-  TimelessStaples,
+  // TimelessStaples,
   RecentArrivals,
   Midslide,
   Testimonials,
@@ -21,7 +21,7 @@ export default function HomePage() {
       <Homeabout />
        <SelectedWorks />
       <Homeservices />
-    <TimelessStaples />
+    {/* <TimelessStaples /> */}
       <RecentArrivals />
       <Midslide />
       <Testimonials />

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import heroImage from "@/public/assets/slide1.jpg"; // ✅ Correct import path for Next.js public folder
+import heroImage from "@/public/assets/home/last banner.webp"; // ✅ Correct import path for Next.js public folder
 
 export default function SliderHero() {
   return (
@@ -13,7 +13,7 @@ export default function SliderHero() {
         alt="Studio.in Hero"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-center "
       />
 
       {/* Dark overlay */}
@@ -22,12 +22,12 @@ export default function SliderHero() {
       {/* Text Content */}
       <div className="relative z-10 text-white mr-10 max-w-lg text-right">
         <h1 className="text-4xl md:text-5xl font-serif leading-snug drop-shadow-lg">
-          Shop the Dark <br />
-          Tailored Pants <em className="italic">Now!</em>
-        </h1>
+  Let Your Love Shine <br />
+  In the Open <em className="italic">Outdoors</em>
+</h1>
 
         <button className="mt-6 px-6 py-2 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300">
-          Shop Now
+        Book Now
         </button>
       </div>
     </section>
