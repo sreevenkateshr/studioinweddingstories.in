@@ -4,21 +4,22 @@ import React from "react";
 import Link from "next/link"; // ✅ use next/link, not react-router-dom
 import Image from "next/image"; // ✅ recommended for Next.js
 
-import wedding1 from "@/public/assets/wedding1.jpg";
-import wedding2 from "@/public/assets/wedding2.jpg";
-import wedding3 from "@/public/assets/wedding3.jpg";
-import wedding4 from "@/public/assets/wedding4.jpg";
-import wedding5 from "@/public/assets/wedding5.jpg";
-import tee10 from "@/public/assets/tee10.jpg";
+import wedding1 from "@/public/assets/selectedworks/select work 05.webp";
+import wedding2 from "@/public/assets/selectedworks/select work 05.webp";
+import wedding3 from "@/public/assets/selectedworks/select work 05.webp";
+import wedding4 from "@/public/assets/selectedworks/select work 05.webp";
+import wedding5 from "@/public/assets/selectedworks/select work 05.webp";
+import wedding6 from "@/public/assets/selectedworks/select work 05.webp";
 
 export default function Portfolio() {
   const portfolioItems = [
-    { title: "Portraits", img: wedding1, link: "/portfolio/portraits" },
-    { title: "Pre Weddings", img: wedding2, link: "/portfolio/preweddings" },
-    { title: "Tamil Weddings", img: wedding3, link: "/portfolio/tamil" },
-    { title: "Telugu Weddings", img: wedding4, link: "/portfolio/telugu" },
-    { title: "Christian Weddings", img: wedding5, link: "/portfolio/christian" },
-    { title: "Hindu Weddings", img: tee10, link: "/portfolio/hinduwedding" },
+    {  img: wedding1, link: "/portfolio/portraits" },
+    {  img: wedding2, link: "/portfolio/preweddings" },
+    {  img: wedding3, link: "/portfolio/tamil" },
+    {  img: wedding4, link: "/portfolio/telugu" },
+    {  img: wedding5, link: "/portfolio/christian" },
+     {  img: wedding6, link: "/portfolio/christian" },
+    // { title: "Hindu Weddings", img: tee10, link: "/portfolio/hinduwedding" },
   ];
 
   return (
@@ -26,7 +27,7 @@ export default function Portfolio() {
       {/* Banner Section */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="https://i0.wp.com/paperboatweddingphotography.com/wp-content/uploads/2024/07/DSC00663.jpg?fit=1920%2C1280&ssl=1"
+          src="/assets/banner 03.webp"
           alt="Portfolio Banner"
           fill
           className="object-cover"
@@ -44,7 +45,7 @@ export default function Portfolio() {
       {/* Portfolio Section */}
       <section className="bg-gray-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-black">
             Our Portfolio
           </h2>
           <p className="uppercase tracking-widest text-gray-500 text-sm md:text-base mb-6">
@@ -67,7 +68,7 @@ export default function Portfolio() {
               <div className="relative h-72 sm:h-80 lg:h-96 overflow-hidden">
                 <Image
                   src={item.img}
-                  alt={item.title}
+                  alt="Weddong-portfolios"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   fill
                 />
@@ -101,7 +102,7 @@ export default function Portfolio() {
             <p className="mt-3 italic text-gray-700 text-base">Get to know us</p>
           </div>
 
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <Link
               href="/films"
               className="inline-block px-10 py-3 border border-black rounded-full text-black text-base font-medium tracking-widest transition-colors duration-300 hover:bg-black hover:text-white"
@@ -109,7 +110,7 @@ export default function Portfolio() {
               WEDDING FILMS
             </Link>
             <p className="mt-3 italic text-gray-700 text-base">Explore our Work</p>
-          </div>
+          </div> */}
 
           <div className="flex flex-col items-center">
             <Link

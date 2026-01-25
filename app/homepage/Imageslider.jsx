@@ -17,7 +17,7 @@ export default function ImageSlider() {
   ];
 
   return (
-    <div className="w-full bg-[#f4f3ef]">
+    <div className="w-full bg-[#f8f9fa]">
       <div className="max-w-6xl mx-auto py-16 px-4">
         
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8">

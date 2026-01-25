@@ -1,120 +1,254 @@
-  import {  
-    FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, 
-    FaFacebookF, FaInstagram, FaYoutube, FaPinterestP, FaWhatsapp 
-  } from "react-icons/fa";
-  
-import Image from "next/image";   // <-- ADD THIS
-import studio from "../../public/logos/sinblacl.png";
-  export default function Footer() {
-    // Scroll to top function
-    const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+"use client";
 
-    return (
-      <>
-        {/* Footer */}
-        <footer className="bg-white text-black font-inter text-sm px-6 md:px-16 lg:px-28 py-16">
-          <div className="flex flex-col lg:flex-row justify-between gap-12 md:gap-16">
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaPinterestP,
+} from "react-icons/fa";
+import Image from "next/image";
+import studio from "../../public/logos/sinwhite.png";
 
-            {/* Logo + Contact */}
-            <div className="w-full lg:w-1/4 space-y-6">
-<Image 
-  src={studio} 
-  alt="Studio Logo" 
-  width={220}
-  height={80}
-  className="w-56 h-auto"
-/>
-              <div className="space-y-3 text-black-400">
-                <div className="flex items-start gap-3">
-                  <FaMapMarkerAlt className="mt-1 text-red-500" />
-                  <span>Kanyakumari, Tamil Nadu - 629001</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <FaPhoneAlt className="text-green-400" />
-                  <span>+91 6374926377</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <FaEnvelope className="text-yellow-400" />
-                  <span>contact@myphotography.com</span>
-                </div>
-              </div>
+export default function Footer() {
+  return (
+    <footer className="bg-[#84a7a1] text-white font-inter text-sm px-6 md:px-16 lg:px-28 py-16">
+      <div className="flex flex-col lg:flex-row justify-between gap-12 md:gap-16">
+        {/* Logo + Contact */}
+        <div className="w-full lg:w-1/4 space-y-6">
+          <Image
+            src={studio}
+            alt="Studio Logo"
+            width={220}
+            height={80}
+            className="w-56 h-auto"
+          />
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className="mt-1 text-white" />
+              <span>Kanyakumari, Tamil Nadu - 629001</span>
             </div>
-
-            {/* Weddings Section */}
-            <div className="w-full lg:w-1/4">
-              <h3 className="uppercase text-black-300 font-semibold mb-4 tracking-wide">Weddings</h3>
-              <ul className="space-y-2 text-black-400">
-                <li><a href="/wedding-photography/outdoor" className="hover:text-pink-400 transition">Outdoor Wedding Photography</a></li>
-                <li><a href="/wedding-photography/muslim" className="hover:text-pink-400 transition">Muslim Wedding Photography</a></li>
-                <li><a href="/wedding-photography/christian" className="hover:text-pink-400 transition">Christian Wedding Photography</a></li>
-                <li><a href="/wedding-photography/brahmin" className="hover:text-pink-400 transition">Brahmin Wedding Photography</a></li>
-                <li><a href="/wedding-photography/telugu" className="hover:text-pink-400 transition">Telugu Wedding Photography</a></li>
-                <li><a href="/wedding-photography/hindu" className="hover:text-pink-400 transition">Hindu Wedding Photography</a></li>
-                <li><a href="/wedding-photography/engagement" className="hover:text-pink-400 transition">Engagement Photography</a></li>
-              </ul>
+            <div className="flex items-center gap-3">
+              <FaPhoneAlt className="text-white" />
+              <span>+91 6374926377</span>
             </div>
-
-            {/* Gallery + Kids + Indoor + Outdoor */}
-            <div className="w-full lg:w-1/4 space-y-8">
-              <div>
-                <h3 className="uppercase text-black-300 font-semibold mb-4 tracking-wide">Gallery</h3>
-                <ul className="space-y-2 text-black-400">
-                  <li><a href="/gallery" className="hover:text-pink-400 transition">Gallery Home</a></li>
-                  <li><a href="/gallery/kids" className="hover:text-pink-400 transition">Kids</a></li>
-                  <li><a href="/gallery/indoor" className="hover:text-pink-400 transition">Indoor</a></li>
-                  <li><a href="/gallery/outdoor" className="hover:text-pink-400 transition">Outdoor</a></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Video + Blog + Locations */}
-            <div className="w-full lg:w-1/4 space-y-8">
-              <div>
-                <h3 className="uppercase text-black-300 font-semibold mb-4 tracking-wide">Video</h3>
-                <ul className="space-y-2 text-black-400">
-                  <li><a href="/wedding-films/candid" className="hover:text-pink-400 transition">Candid Wedding Films</a></li>
-                  <li><a href="/wedding-films/outdoor" className="hover:text-pink-400 transition">Outdoor Wedding Films</a></li>
-                  <li><a href="/wedding-films/shortstories" className="hover:text-pink-400 transition">Short Stories</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="uppercase text-black-300 font-semibold mb-4 tracking-wide">Blog</h3>
-                <ul className="space-y-2 text-black-400">
-                  <li><a href="/blog/malayali-wedding-locations" className="hover:text-pink-400 transition">Malayali Weddings</a></li>
-                  <li><a href="/blog/natural-light-tips" className="hover:text-pink-400 transition">Natural Light Tips</a></li>
-                </ul>
-              </div>
+            <div className="flex items-center gap-3">
+              <FaEnvelope className="text-white" />
+              <span>contact@myphotography.com</span>
             </div>
           </div>
+        </div>
 
-          {/* Social Icons */}
-          <div className="flex gap-6 mt-12 justify-center text-white text-2xl">
-            <a href="#" className="hover:text-blue-500 transition transform hover:scale-110"><FaFacebookF /></a>
-            <a href="#" className="hover:text-pink-500 transition transform hover:scale-110"><FaInstagram /></a>
-            <a href="#" className="hover:text-red-500 transition transform hover:scale-110"><FaYoutube /></a>
-            <a href="#" className="hover:text-rose-400 transition transform hover:scale-110"><FaPinterestP /></a>
-          </div>
-
-          {/* Footer Bottom */}
-          <div className="mt-10 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between">
-            <p className="text-black-400 text-sm">©2025 StudioIn. All rights reserved.</p>
-            <p className="text-sm mt-2 md:mt-0">
-              Developed by{" "}
-              <a 
-                href="https://sreevenkatesh.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent hover:animate-pulse"
+        {/* Weddings Section */}
+        <div className="w-full lg:w-1/4">
+          <h3 className="uppercase font-semibold mb-4 tracking-wide">
+            Weddings
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="/wedding-photography/outdoor"
+                className="hover:text-gray-200 transition"
               >
-                Sree Venkatesh
+                Traditional Wedding Photography
               </a>
-            </p>
-          </div>
-        </footer>
+            </li>
+            <li>
+              <a
+                href="/wedding-photography/muslim"
+                className="hover:text-gray-200 transition"
+              >
+                Candid Wedding Photography
+              </a>
+            </li>
+            <li>
+              <a
+                href="/wedding-photography/christian"
+                className="hover:text-gray-200 transition"
+              >
+                Pre-Wedding Photography
+              </a>
+            </li>
+            <li>
+              <a
+                href="/wedding-photography/brahmin"
+                className="hover:text-gray-200 transition"
+              >
+                Post-Wedding Photography
+              </a>
+            </li>
+            <li>
+              <a
+                href="/wedding-photography/telugu"
+                className="hover:text-gray-200 transition"
+              >
+                Enagement
+              </a>
+            </li>
+            {/* <li>
+              <a
+                href="/wedding-photography/hindu"
+                className="hover:text-gray-200 transition"
+              >
+                Hindu Wedding Photography
+              </a>
+            </li> */}
+            {/* <li>
+              <a
+                href="/wedding-photography/engagement"
+                className="hover:text-gray-200 transition"
+              >
+                Engagement Photography
+              </a>
+            </li> */}
+          </ul>
+        </div>
 
-      </>
-    );
-  }
+        {/* Gallery */}
+        <div className="w-full lg:w-1/4 space-y-8">
+          <div>
+            <h3 className="uppercase font-semibold mb-4 tracking-wide">
+              Gallery
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/galleries" className="hover:text-gray-200 transition">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/kids/gallery"
+                  className="hover:text-gray-200 transition"
+                >
+                  Kids
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/kids/indoor"
+                  className="hover:text-gray-200 transition"
+                >
+                  Indoor
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/kids/outdoor"
+                  className="hover:text-gray-200 transition"
+                >
+                  Outdoor
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Video + Blog */}
+        <div className="w-full lg:w-1/4 space-y-8">
+          <div>
+            <h3 className="uppercase font-semibold mb-4 tracking-wide">
+              Video
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://youtu.be/7s_G5rikLRA?si=_TkSGykTNu1uEr8x"
+                  className="hover:text-gray-200 transition"
+                >
+                  Traditional Wedding Films
+                </a>
+              </li>
+              {/* <li>
+                <a
+                  href="/wedding-films/outdoor"
+                  className="hover:text-gray-200 transition"
+                >
+                  Outdoor Wedding Films
+                </a>
+              </li> */}
+              {/* <li>
+                <a
+                  href="/wedding-films/shortstories"
+                  className="hover:text-gray-200 transition"
+                >
+                  Short Stories
+                </a>
+              </li> */}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="uppercase font-semibold mb-4 tracking-wide">Blog</h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="/blog"
+                  className="hover:text-gray-200 transition"
+                >
+                  Weddings
+                </a>
+              </li>
+              {/* <li>
+                <a
+                  href="/blog/natural-light-tips"
+                  className="hover:text-gray-200 transition"
+                >
+                  Natural Light Tips
+                </a>
+              </li> */}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Icons */}
+      <div className="flex gap-6 mt-12 justify-center text-white text-2xl">
+        <a
+          href="#"
+          className="hover:text-gray-200 transition transform hover:scale-110"
+        >
+          <FaFacebookF />
+        </a>
+        <a
+          href="#"
+          className="hover:text-gray-200 transition transform hover:scale-110"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="#"
+          className="hover:text-gray-200 transition transform hover:scale-110"
+        >
+          <FaYoutube />
+        </a>
+        <a
+          href="#"
+          className="hover:text-gray-200 transition transform hover:scale-110"
+        >
+          <FaPinterestP />
+        </a>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="mt-10 border-t border-white/40 pt-6 flex flex-col md:flex-row items-center justify-between">
+        <p className="text-white text-sm">
+          ©2026 StudioIn. All rights reserved.
+        </p>
+        <p className="text-sm mt-2 md:mt-0">
+          Developed by{" "}
+          <a
+            href="https://sreevenkatesh.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-clip-text text-white hover:underline"
+          >
+            Sree Venkatesh
+          </a>
+        </p>
+      </div>
+    </footer>
+  );
+}

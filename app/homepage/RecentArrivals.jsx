@@ -42,7 +42,7 @@ export default function AlbumShowcase() {
             Albums Showcases
           </h2>
           <p className="text-gray-600 mt-2 max-w-xl">
-            Explore our curated albums. Each album beautifully captures memorable moments. Click "View Album" to see the complete work. Photographers can also contact us for designing custom albums.
+            Explore our curated albums. Each album beautifully captures memorable moments. Click  to see the complete work. Photographers can also contact us for designing custom albums.
           </p>
         </div>
         <a

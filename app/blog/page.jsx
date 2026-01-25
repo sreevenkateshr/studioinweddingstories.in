@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 
 // ✅ BlogSection component
@@ -36,11 +37,13 @@ const BlogSection = () => {
     <section className="bg-gray-50">
       {/* Hero Banner */}
       <div className="relative w-full h-[70vh] overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1517816428104-797678c7cf0d?auto=format&fit=crop&w=1600&q=80"
-          alt="Featured Blog"
-          className="w-full h-full object-cover"
-        />
+          <Image
+                  src="/assets/banner 03.webp"
+                  alt="Portfolio Banner"
+                  fill
+                  priority
+                  className="object-cover"
+                />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Featured Blog

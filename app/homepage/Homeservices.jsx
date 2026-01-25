@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Categoryshowcase() {
   return (
-    <div style={{ backgroundColor: "#f4f3ef", width: "100%" }}>
+    <div style={{ backgroundColor: "#f8f9fa", width: "100%" }}>
       <div className="max-w-screen-xl mx-auto px-4 py-20">
         <h2
           className=" text-black text-center text-4xl md:text-4xl mb-16"

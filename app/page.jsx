@@ -5,12 +5,14 @@ import {
   SelectedWorks,
   Homeservices,
   // TimelessStaples,
-  RecentArrivals,
+  // RecentArrivals,
   Midslide,
-  Testimonials,
+  // Testimonials,
+  DreamCounter,
   Ourprocess,
-  Homevideo,
-  Homebookus,
+  // HomeFAQ,
+  // Homevideo,
+  // Homebookus,
   Imageslider,
 } from "./homepage";
 
@@ -19,16 +21,20 @@ export default function HomePage() {
     <>
       <HeroSection />
       <Homeabout />
-       <SelectedWorks />
+      <SelectedWorks />
       <Homeservices />
-    {/* <TimelessStaples /> */}
-      <RecentArrivals />
+      {/* <TimelessStaples /> */}
+      {/* <RecentArrivals /> */}
       <Midslide />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Ourprocess />
-      <Homevideo />
-      <Homebookus />
-      <Imageslider /> 
+      <DreamCounter />
+
+      {/* <Faqsection /> */}
+      {/* <HomeFAQ /> */}
+      {/* <Homevideo /> */}
+      {/* <Homebookus /> */}
+      <Imageslider />
     </>
   );
 }

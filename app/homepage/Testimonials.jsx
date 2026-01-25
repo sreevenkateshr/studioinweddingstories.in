@@ -29,15 +29,15 @@ export default function TestimonialsSlider() {
   }, [startIndex]);
 
   return (
-    <div className="bg-[#f4f3ef] py-20">
+    <div className="bg-[#84a7a1] py-20">
       <div className="container mx-auto px-6 md:px-20 relative">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif mb-2">What Our Clients Say</h2>
-          <p className="text-gray-600">Hear from the happy couples and families we’ve worked with</p>
+          <h2 className="text-3xl md:text-4xl font-serif mb- text-white">What Our Clients Say</h2>
+          <p className="text-gray-600 text-white">Hear from the happy couples and families we’ve worked with</p>
         </div>
 
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-sm tracking-[0.3em] text-gray-800 uppercase">TESTIMONIALS</h2>
+          <h2 className="text-sm tracking-[0.3em] text-gray-800 uppercase text-white">TESTIMONIALS</h2>
           <div className="flex space-x-6">
             <button onClick={prev} className="text-2xl hover:text-gray-600">←</button>
             <button onClick={next} className="text-2xl hover:text-gray-600">→</button>
@@ -47,8 +47,8 @@ export default function TestimonialsSlider() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {visibleTestimonials.map((t, idx) => (
             <div key={idx} className="max-w-sm transition-all duration-500 ease-in-out transform hover:-translate-y-1">
-              <p className="text-lg leading-relaxed text-gray-800 mb-6">“{t.text}”</p>
-              <p className="tracking-[0.3em] text-gray-900 font-medium">{t.name}</p>
+              <p className="text-lg leading-relaxed text-gray-800 mb-6 text-white">“{t.text}”</p>
+              <p className="tracking-[0.3em] text-gray-900 font-medium text-white">{t.name}</p>
             </div>
           ))}
         </div>

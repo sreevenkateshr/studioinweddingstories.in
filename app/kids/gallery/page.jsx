@@ -1,68 +1,80 @@
-"use client";  // 👈 add this line at the very top
+"use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
+const photos = [
+  "/assets/selectedworks/select work 01.webp",
+  "/assets/selectedworks/select work 13.webp",
+  "/assets/selectedworks/select work 20.webp",
+  "/assets/selectedworks/select work 09.webp",
+  "/assets/selectedworks/select work 177.webp",
+  "/assets/selectedworks/select work 17.webp",
+  "/assets/selectedworks/select work 04.webp",
+  "/assets/selectedworks/select work 19.webp",
+  "/assets/selectedworks/select work 05.webp",
+  "/assets/selectedworks/select work 15.webp",
+  "/assets/selectedworks/select work 02.webp",
+  "/assets/selectedworks/select work 03.webp",
+  "/assets/selectedworks/select work 07.webp",
+  "/assets/selectedworks/select work 166.webp",
+  "/assets/selectedworks/select work 18.webp",
+  "/assets/selectedworks/select work 12.webp",
+  "/assets/selectedworks/select work 10.webp",
+  "/assets/selectedworks/select work 08.webp",
+  "/assets/selectedworks/select work 111.webp",
+  "/assets/selectedworks/select work 14.webp",
+];
 
-export default function Gallery() {
-  const galleryImages = [
-    "https://images.unsplash.com/photo-1603201667230-bd3d3edba0c1?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1503457574464-6e271e3a5d20?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1531927557220-dc2f41f1bb07?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=800&q=80",
-  ];
-
+export default function SelectedWorks() {
   return (
-    <section className="bg-gray-50 min-h-screen">
-   
-
-      {/* Hero Section */}
-      <div className="relative h-[70vh] w-full">
-        <img
-          src="https://images.unsplash.com/photo-1603201667230-bd3d3edba0c1?auto=format&fit=crop&w=1600&q=80"
-          alt="Kids Gallery"
-          className="w-full h-full object-cover"
+    <>
+      {/* 🌟 FEATURED BANNER */}
+      <section className="relative h-[70vh] w-full">
+        <Image
+          src="/assets/banner 03.webp"
+          alt="Portfolio Banner"
+          fill
+          priority
+          className="object-cover"
         />
+
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-            Kids Gallery
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 uppercase">
+            Galleries
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl">
-            Browse through playful memories captured indoors and outdoors.
+            Explore our best works — where every frame tells a timeless story.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Gallery Section */}
-      <div className="max-w-7xl mx-auto py-16 px-6 md:px-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-          Our Colorful Moments
-        </h2>
-
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {galleryImages.map((img, idx) => (
+      {/* 🖼️ MASONRY GRID */}
+      <section className="py-20 px-4 md:px-10 bg-white font-spectral text-center">
+        <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 max-w-7xl mx-auto">
+          {photos.map((src, index) => (
             <div
-              key={idx}
-              className="relative group rounded-2xl overflow-hidden shadow-lg"
+              key={index}
+              className="break-inside-avoid mb-4 overflow-hidden rounded-xl shadow group"
             >
-              <img
-                src={img}
-                alt={`Kids Gallery ${idx + 1}`}
-                className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+              <Image
+                src={src}
+                width={500}
+                height={700}
+                alt={`photo-${index}`}
+                className="w-full h-auto object-cover "  
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex justify-center items-center transition duration-500">
-                <p className="text-white text-lg font-semibold">View Photo</p>
-              </div>
             </div>
           ))}
         </div>
-      </div>
 
-      
-    </section>
+      </section>
+    </>
   );
 }
+
+
+//  grayscale group-hover:grayscale-0
+//                            scale-100 group-hover:scale-105
+//                            transition-all duration-500 ease-out

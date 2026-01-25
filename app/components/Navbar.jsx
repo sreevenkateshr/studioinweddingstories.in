@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
+        scrolled ? "bg-[#84a7a1] shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* LOGO SWITCH */}
         <Link href="/" className="flex items-center">
           <Image
-            src={scrolled ? studioinlogoBlack : studioinlogoWhite}
+            src={scrolled ? studioinlogoWhite : studioinlogoWhite}
             alt="Studio Logo"
             className="w-28 md:w-32 h-auto transition-all"
             priority
@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* DESKTOP MENU */}
         <ul
           className={`hidden md:flex gap-8 font-medium transition-all ${
-            scrolled ? "text-gray-800" : "text-white"
+            scrolled ? "text-white-800" : "text-white"
           }`}
         >
           {/* DROPDOWN */}
@@ -65,8 +65,8 @@ const Navbar = () => {
           <li className="hover:text-purple-500"><Link href="/kids">Kids</Link></li>
           <li className="hover:text-purple-500"><Link href="/portfolio">Portfolio</Link></li>
           <li className="hover:text-purple-500"><Link href="/about">About Us</Link></li>
-          <li className="hover:text-purple-500"><Link href="/blog">Blogs</Link></li>
           <li className="hover:text-purple-500"><Link href="/testimonials">Testimonials</Link></li>
+          <li className="hover:text-purple-500"><Link href="/galleries">Galleries</Link></li>
         </ul>
 
         {/* DESKTOP BUTTONS */}
@@ -75,7 +75,7 @@ const Navbar = () => {
             <button
               className={`px-4 py-2 rounded-lg transition ${
                 scrolled
-                  ? "border border-gray-900 text-black hover:bg-gray-100"
+                  ? "border border-white-900 text-white hover:bg-gray-100"
                   : "border border-white text-white hover:bg-white/20"
               }`}
             >
@@ -83,10 +83,10 @@ const Navbar = () => {
             </button>
           </Link>
 
-          <a href="tel:6374926377">
+          <a href="tel:9597508874">
             <button
               className={`px-4 py-2 rounded-lg transition ${
-                scrolled ? "bg-black text-white" : "bg-white text-black"
+                scrolled ? "bg-white text-black" : "bg-white text-black"
               }`}
             >
               Book Now

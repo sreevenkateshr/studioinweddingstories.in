@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import img1 from "../../public/kids/about1.jpg";
 import img2 from "../../public/kids/about2.jpg";
-import kidshero from "../../public/kids/kids hero.jpg"
+import kidshero from "../../public/kids/kids hero.jpg";
 /**
  * SelectedWorks - masonry-like gallery using CSS columns
  */
@@ -40,10 +40,11 @@ function SelectedWorks() {
     "/assets/selectedworks/select work 14.webp",
   ];
 
-
   return (
     <section className="py-20 px-4 md:px-10 bg-white font-spectral text-center">
-      <h2 className="text-sm text-gray-500 tracking-wider uppercase mb-8">Selected works</h2>
+      <h2 className="text-sm text-gray-500 tracking-wider uppercase mb-8">
+        Selected works
+      </h2>
 
       <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 max-w-7xl mx-auto">
         {photos.map((src, index) => (
@@ -119,8 +120,8 @@ function InstagramSlider() {
         {images.map((src, index) => (
           <SwiperSlide key={index}>
             <div className="relative group">
-              <img
-                src={src}
+              <Image
+                src={kidshero}
                 alt={`insta-${index}`}
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-500 group-hover:scale-105"
               />
@@ -165,7 +166,8 @@ export default function KidsHome() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Capture the innocence, laughter, and colorful world of your child  where every photo tells a story.
+            Capture the innocence, laughter, and colorful world of your child
+            where every photo tells a story.
           </motion.p>
           <motion.button
             className="mt-8 px-10 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-black hover:text-white transition-all duration-300"
@@ -177,58 +179,60 @@ export default function KidsHome() {
       </div>
 
       {/* About US page */}
-<section className="py-20 px-6 md:px-16 bg-white font-spectral">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-        {/* Left Image */}
-        <div className="md:col-span-1">
-          <img
-            src={img1.src}
-            alt="Bride"
-            className="rounded-lg shadow-lg w-full object-cover"
-          />
-        </div>
-
-        {/* Stacked Images */}
-        <div className="md:col-span-1 space-y-4">
-          {[img2].map((src, idx) => (
-            <img
-              key={idx}
-              src={src.src}
-              alt={`stacked ${idx}`}
-              className="rounded-lg shadow-md w-full object-cover"
+      <section className="py-20 px-6 md:px-16 bg-white font-spectral">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+          {/* Left Image */}
+          <div className="md:col-span-1">
+            <Image
+              src={kidshero}
+              alt="Bride"
+              className="rounded-lg shadow-lg w-full object-cover"
             />
-          ))}
+          </div>
+
+          {/* Stacked Images */}
+          <div className="md:col-span-1 space-y-4">
+            {[img2].map((src, idx) => (
+              <Image
+                key={idx}
+                src={kidshero}
+                alt={`stacked ${idx}`}
+                className="rounded-lg shadow-md w-full object-cover"
+              />
+            ))}
+          </div>
+
+          {/* Text Content */}
+          <div className="md:col-span-1 text-gray-800">
+            <p className="uppercase text-sm tracking-widest text-gray-600 mb-4">
+              Why Little Studio.in?
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold leading-snug mb-6 text-gray-900">
+              Lasting childhood memories <br /> through magical, soulful
+              photography
+            </h2>
+
+            <p className="text-base leading-relaxed mb-6 text-gray-700">
+              We specialize in capturing the pure joy, curiosity, and innocence
+              of childhood through creative and expressive photography. From
+              newborn and toddler portraits to birthday shoots and family
+              moments, we turn every milestone into a beautiful story. With a
+              warm kid-friendly approach, professional lighting, and handcrafted
+              edits, we ensure every photograph becomes a timeless keepsake for
+              parents. Our focus on comfort, safety, and on-time delivery makes
+              the entire experience joyful and memorable for both kids and
+              families.
+            </p>
+
+            {/* ✅ Next.js navigation */}
+            <Link href="/aboutus">
+              <button className="px-6 py-2 border border-black rounded-full text-sm tracking-wide hover:bg-black hover:text-white transition duration-300">
+                Learn More
+              </button>
+            </Link>
+          </div>
         </div>
-
-        {/* Text Content */}
-        <div className="md:col-span-1 text-gray-800">
-          <p className="uppercase text-sm tracking-widest text-gray-600 mb-4">
-            Why Little Studio.in?
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold leading-snug mb-6 text-gray-900">
-Lasting childhood memories <br /> through magical, soulful photography
-</h2>
-
-<p className="text-base leading-relaxed mb-6 text-gray-700">
-  We specialize in capturing the pure joy, curiosity, and innocence of
-  childhood through creative and expressive photography. From newborn and
-  toddler portraits to birthday shoots and family moments, we turn every
-  milestone into a beautiful story. With a warm kid-friendly approach,
-  professional lighting, and handcrafted edits, we ensure every photograph
-  becomes a timeless keepsake for parents. Our focus on comfort, safety, and
-  on-time delivery makes the entire experience joyful and memorable for both
-  kids and families.
-</p>
-
-          {/* ✅ Next.js navigation */}
-          <Link href="/aboutus">
-            <button className="px-6 py-2 border border-black rounded-full text-sm tracking-wide hover:bg-black hover:text-white transition duration-300">
-              Learn More
-            </button>
-          </Link>
-        </div>
-      </div>
-    </section>
+      </section>
 
       {/* Features Section */}
       {/* <section className="py-20 bg-white text-center">
@@ -296,16 +300,25 @@ Lasting childhood memories <br /> through magical, soulful photography
 
       {/* Testimonials */}
       <section className="py-20 bg-white text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-800">What Parents Say</h2>
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-800">
+          What Parents Say
+        </h2>
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-2">
           {[
             {
               name: "Anita Sharma",
-              review: "The studio session was magical! My son enjoyed every moment, and the photos turned out beyond my expectations.",
+              review:
+                "The studio session was magical! My son enjoyed every moment, and the photos turned out beyond my expectations.",
             },
             {
               name: "Rahul Mehta",
-              review: "Amazing concepts and very professional team. My daughter felt so comfortable, and the photos are priceless!",
+              review:
+                "Amazing concepts and very professional team. My daughter felt so comfortable, and the photos are priceless!",
+            },
+               {
+              name: "Rahul Mehta",
+              review:
+                "Amazing concepts and very professional team. My daughter felt so comfortable, and the photos are priceless!",
             },
           ].map((t, i) => (
             <motion.div
@@ -339,5 +352,3 @@ Lasting childhood memories <br /> through magical, soulful photography
     </main>
   );
 }
-
-
