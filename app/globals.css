@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* =====================
+   ROOT THEME
+===================== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,8 +22,83 @@
   }
 }
 
+/* =====================
+   GLOBAL BODY
+===================== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 200vh; /* ensures scroll exists */
+}
+
+/* =====================
+   WHATSAPP FLOAT BUTTON
+   LEFT
+===================== */
+.whatsapp-btn {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 2rem;
+  background-color: #00d757;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* =====================
+   BACK TO TOP BUTTON
+   RIGHT
+===================== */
+/* <main-style> ============================ */
+.scroll-up {
+	/* position: fixed; */
+  right: 3rem;
+  bottom: -50%;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: rgba(29, 29, 31, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: bottom .4s, transform .4s;
+}
+
+.scroll-up:hover {
+  transform: translateY(-.25rem);
+}
+
+/* Show scroll-up */
+._show-scroll {
+  bottom: 3rem;
+}
+
+@media (max-width: 1199.98px) {
+  .scroll-up {
+    right: 1rem;
+  }
 }

@@ -5,9 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-// IMPORT TWO LOGOS
-import studioinlogoBlack from "../../public/logos/sinblacl.png";
+// LOGO
 import studioinlogoWhite from "../../public/logos/sinwhite.png";
+
+// SOCIAL ICONS (you can replace with your own links)
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -26,11 +33,10 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-
-        {/* LOGO SWITCH */}
+        {/* LOGO */}
         <Link href="/" className="flex items-center">
           <Image
-            src={scrolled ? studioinlogoWhite : studioinlogoWhite}
+            src={studioinlogoWhite}
             alt="Studio Logo"
             className="w-28 md:w-32 h-auto transition-all"
             priority
@@ -38,57 +44,34 @@ const Navbar = () => {
         </Link>
 
         {/* DESKTOP MENU */}
-        <ul
-          className={`hidden md:flex gap-8 font-medium transition-all ${
-            scrolled ? "text-white-800" : "text-white"
-          }`}
-        >
-          {/* DROPDOWN */}
-          <li className="relative group cursor-pointer">
-            <div className="flex items-center gap-1 hover:text-purple-500">
-              Weddings
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-
-            <ul className="absolute top-full left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-md py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <li className="px-4 py-2 hover:bg-gray-100"><Link href="/weddings/hindu">Traditional</Link></li>
-              <li className="px-4 py-2 hover:bg-gray-100"><Link href="/weddings/christian">Candid</Link></li>
-              <li className="px-4 py-2 hover:bg-gray-100"><Link href="/weddings/muslim">Pre-Wedding</Link></li>
-              <li className="px-4 py-2 hover:bg-gray-100"><Link href="/weddings/prewedding">Post-Wedding</Link></li>
-              <li className="px-4 py-2 hover:bg-gray-100"><Link href="/weddings/engagement">Engagement</Link></li>
-              {/* <li className="px-4 py-2 hover:bg-gray-100"><Link href="/weddings/outdoor">Outdoor</Link></li> */}
-            </ul>
+        <ul className="hidden md:flex gap-8 font-medium text-white">
+          <li className="hover:text-purple-500">
+            <Link href="/service">Services</Link>
           </li>
-
-          <li className="hover:text-purple-500"><Link href="/kids">Kids</Link></li>
-          <li className="hover:text-purple-500"><Link href="/portfolio">Portfolio</Link></li>
-          <li className="hover:text-purple-500"><Link href="/about">About Us</Link></li>
-          <li className="hover:text-purple-500"><Link href="/testimonials">Testimonials</Link></li>
-          <li className="hover:text-purple-500"><Link href="/galleries">Galleries</Link></li>
+          <li className="hover:text-purple-500">
+            <Link href="/kids">Kids</Link>
+          </li>
+          <li className="hover:text-purple-500">
+            <Link href="/about">About Us</Link>
+          </li>
+          <li className="hover:text-purple-500">
+            <Link href="/testimonials">Testimonials</Link>
+          </li>
+          <li className="hover:text-purple-500">
+            <Link href="/galleries">Galleries</Link>
+          </li>
         </ul>
 
         {/* DESKTOP BUTTONS */}
         <div className="hidden md:flex items-center gap-3">
           <Link href="/contact">
-            <button
-              className={`px-4 py-2 rounded-lg transition ${
-                scrolled
-                  ? "border border-white-900 text-white hover:bg-gray-100"
-                  : "border border-white text-white hover:bg-white/20"
-              }`}
-            >
+            <button className="px-4 py-2 rounded-lg border border-white text-white hover:bg-white/20 transition">
               Get in Touch
             </button>
           </Link>
 
-          <a href="tel:9597508874">
-            <button
-              className={`px-4 py-2 rounded-lg transition ${
-                scrolled ? "bg-white text-black" : "bg-white text-black"
-              }`}
-            >
+          <a href="tel:6374926377">
+            <button className="px-4 py-2 rounded-lg bg-white text-black transition">
               Book Now
             </button>
           </a>
@@ -96,56 +79,106 @@ const Navbar = () => {
 
         {/* MOBILE ICON */}
         <button className="md:hidden" onClick={() => setOpen(true)}>
-          <Menu size={28} className={`${scrolled ? "text-black" : "text-white"}`} />
+          <Menu size={28} className={scrolled ? "text-black" : "text-white"} />
         </button>
       </div>
 
-      {/* MOBILE MENU SIDEBAR */}
+      {/* MOBILE MENU */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 md:hidden"
+          className="fixed inset-0 bg-black/50 z-50 flex justify-end"
           onClick={() => setOpen(false)}
         >
           <div
-            className="absolute right-0 top-0 w-3/4 bg-white h-full p-6 shadow-md"
+            className="relative w-3/4 bg-[#83a6a0] h-full flex flex-col justify-center items-center gap-8 p-8 shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-end mb-6">
-              <X size={28} onClick={() => setOpen(false)} className="cursor-pointer" />
+            {/* CLOSE BUTTON */}
+            <div className="absolute top-6 right-6">
+              <X
+                size={28}
+                onClick={() => setOpen(false)}
+                className="cursor-pointer text-white"
+              />
             </div>
 
-            <ul className="space-y-6 text-lg font-medium text-gray-700">
-              <details>
-                <summary className="cursor-pointer">Weddings</summary>
-                <ul className="mt-2 pl-4 space-y-2">
-                  <li><Link href="/weddings/hindu">Traditional</Link></li>
-                  <li><Link href="/weddings/christian">Christian</Link></li>
-                  <li><Link href="/weddings/muslim">Muslim</Link></li>
-                  <li><Link href="/weddings/prewedding">Pre-Wedding</Link></li>
-                  <li><Link href="/weddings/engagement">Engagement</Link></li>
-                  <li><Link href="/weddings/outdoor">Outdoor</Link></li>
-                </ul>
-              </details>
-
-              <li><Link href="/kids">Kids</Link></li>
-              <li><Link href="/portfolio">Portfolio</Link></li>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/blog">Blogs</Link></li>
-              <li><Link href="/testimonials">Testimonials</Link></li>
+            {/* MENU LINKS */}
+            <ul className="flex flex-col items-center gap-6 text-white text-xl font-semibold">
+              <li>
+                <Link href="/service" onClick={() => setOpen(false)}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/kids" onClick={() => setOpen(false)}>
+                  Kids
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" onClick={() => setOpen(false)}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/testimonials" onClick={() => setOpen(false)}>
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link href="/galleries" onClick={() => setOpen(false)}>
+                  Galleries
+                </Link>
+              </li>
             </ul>
 
-            {/* BUTTONS */}
-            <div className="mt-10 space-y-4 w-full">
-              <Link href="/contact">
-                <button className="w-full py-3 text-lg font-semibold border border-gray-900 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all">
+            {/* MOBILE BUTTONS */}
+            <div className="flex flex-col items-center gap-4 mt-8 w-full">
+              <a href="/contact" className="w-full">
+                <button className="w-full py-3 text-lg font-semibold border border-white rounded-xl hover:bg-white/20 transition">
                   Get in Touch
                 </button>
-              </Link>
+              </a>
 
-              <a href="tel:6374926377">
-                <button className="w-full py-3 text-lg font-semibold bg-black text-white rounded-xl shadow-md hover:bg-gray-800 active:scale-[0.98] transition-all">
+              <a href="tel:6374926377" className="w-full">
+                <button className="w-full py-3 text-lg font-semibold bg-white text-black rounded-xl transition">
                   Book Now
                 </button>
+              </a>
+            </div>
+
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-6 mt-12">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-200"
+              >
+                <FaFacebookF size={20} />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-200"
+              >
+                <FaInstagram size={20} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-200"
+              >
+                <FaLinkedinIn size={20} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-200"
+              >
+                <FaTwitter size={20} />
               </a>
             </div>
           </div>

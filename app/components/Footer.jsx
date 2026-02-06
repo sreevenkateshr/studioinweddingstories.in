@@ -32,11 +32,11 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-white" />
-              <span>+91 6374926377</span>
+              <span>+91 95975 08874</span>
             </div>
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-white" />
-              <span>contact@myphotography.com</span>
+              <span>studio.in26@gmail.com</span>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function Footer() {
         {/* Weddings Section */}
         <div className="w-full lg:w-1/4">
           <h3 className="uppercase font-semibold mb-4 tracking-wide">
-            Weddings
+            Our Services
           </h3>
           <ul className="space-y-2">
             <li>
@@ -150,7 +150,7 @@ export default function Footer() {
         <div className="w-full lg:w-1/4 space-y-8">
           <div>
             <h3 className="uppercase font-semibold mb-4 tracking-wide">
-              Video
+              FAq
             </h3>
             <ul className="space-y-2">
               <li>
@@ -238,14 +238,14 @@ export default function Footer() {
           ©2026 StudioIn. All rights reserved.
         </p>
         <p className="text-sm mt-2 md:mt-0">
-          Developed by{" "}
+          Powered by{" "}
           <a
             href="https://sreevenkatesh.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-clip-text text-white hover:underline"
           >
-            Sree Venkatesh
+            Cape Tech Solutions
           </a>
         </p>
       </div>
