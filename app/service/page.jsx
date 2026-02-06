@@ -53,7 +53,7 @@ export default function ServicesPage() {
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Our Weddings
+            Our Services
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
             Discover timeless memories captured with love, laughter, and creativity.

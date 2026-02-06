@@ -105,7 +105,7 @@ export default function Contact() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                placeholder="Enter Your Full Name "
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
               />
@@ -118,7 +118,7 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="you@example.com"
+                placeholder="Enter Your Email Address"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
               />
@@ -131,7 +131,7 @@ export default function Contact() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+91 98765 43210"
+                placeholder="Enter Your Phone Number"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
               />
