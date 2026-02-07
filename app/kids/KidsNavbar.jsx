@@ -46,6 +46,7 @@ export default function KidsNavbar() {
           {navItem("/kids/indoor", "Indoor")}
           {navItem("/kids/outdoor", "Outdoor")}
           {navItem("/kids/birthday", "Birthday")}
+          {navItem("/kids/baptism", "Baptism")}
           {navItem("/kids/gallery", "Gallery")}
         </nav>
       </div>

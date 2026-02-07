@@ -1,5 +1,5 @@
-import BirthdayHero from "../birthday/BirthdayHero";
-import BirthdayPortfolio from "../birthday/BirthdayPortfolio"
+import Baptismhero from "../baptism/baptismhero";
+import Baptismportfolio from "../baptism/baptismPortfolio"
 export const metadata = {
   title: "Birthday Outdoor Photography | Snappy Times",
   description:
@@ -10,8 +10,8 @@ export default function BirthdayPage() {
   return (
     <main className="overflow-hidden">
       {/* Birthday Hero Section */}
-      <BirthdayHero />
-      <BirthdayPortfolio />
+      <Baptismhero />
+      <Baptismportfolio />
       {/* You can add more sections below later */}
       {/* <GallerySection /> */}
       {/* <BookingCTA /> */}

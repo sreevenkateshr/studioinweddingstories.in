@@ -48,9 +48,9 @@ const Navbar = () => {
           <li className="hover:text-purple-500">
             <Link href="/service">Services</Link>
           </li>
-          {/* <li className="hover:text-purple-500">
+          <li className="hover:text-purple-500">
             <Link href="/kids">Kids</Link>
-          </li> */}
+          </li>
           <li className="hover:text-purple-500">
             <Link href="/about">About Us</Link>
           </li>
@@ -109,11 +109,11 @@ const Navbar = () => {
                   Services
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link href="/kids" onClick={() => setOpen(false)}>
                   Kids
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link href="/about" onClick={() => setOpen(false)}>
                   About Us
