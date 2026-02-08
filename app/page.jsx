@@ -2,12 +2,15 @@
 import {
   HeroSection,
   Homeabout,
-  SelectedWorks,
   Homeservices,
+  // WhoWeAre,
+  SelectedWorks,
+
   // TimelessStaples,
   // RecentArrivals,
   Midslide,
-  // Testimonials,
+  Testimonials,
+  LatestStories,
   DreamCounter,
   Ourprocess,
   // HomeFAQ,
@@ -15,18 +18,23 @@ import {
   // Homebookus,
   Imageslider,
 } from "./homepage";
+// import CoupleGallerySection from "@/components/CoupleGallerySection";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
       <Homeabout />
-      <SelectedWorks />
       <Homeservices />
+      <SelectedWorks />
+      {/* <WhoWeAre /> */}
+
+      <LatestStories />
+
       {/* <TimelessStaples /> */}
       {/* <RecentArrivals /> */}
-      <Midslide />
-      {/* <Testimonials /> */}
+
+      <Testimonials />
       <Ourprocess />
       <DreamCounter />
 
@@ -34,6 +42,8 @@ export default function HomePage() {
       {/* <HomeFAQ /> */}
       {/* <Homevideo /> */}
       {/* <Homebookus /> */}
+      <Midslide />
+      {/* <CoupleGallerySection /> */}
       <Imageslider />
     </>
   );

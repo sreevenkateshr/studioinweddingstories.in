@@ -3,6 +3,14 @@ import type { ReactNode } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // import FloatingButtons from "./components/FloatingButtons";
+import { Cormorant_Garamond } from "next/font/google";
+
+export const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+});
 
 export default function RootLayout({
   children,

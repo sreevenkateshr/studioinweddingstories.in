@@ -102,3 +102,17 @@ body {
     right: 1rem;
   }
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* fonts used in entire website */
+.font-cormorant {
+  font-family: var(--font-cormorant), serif;
+}

@@ -6,6 +6,7 @@ export default function OutdoorHero() {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
           {/* ================= LEFT CONTENT ================= */}
           <div>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight">
@@ -41,25 +42,23 @@ export default function OutdoorHero() {
             </div>
           </div>
 
-          {/* ================= RIGHT IMAGE / VIDEO ================= */}
-          <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px] rounded-2xl overflow-hidden shadow-lg">
-            <img
-              src="/kids/outdoor/out1.jpg" // replace with your image
-              alt="Outdoor birthday photography with creative themes and natural light"
-              className="w-full h-full object-cover"
-            />
-
-            {/*
-            // Optional YouTube Video
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              title="Outdoor Birthday Photography"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-            />
-            */}
+          {/* ================= RIGHT IMAGE ================= */}
+          <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px]">
+            <div
+              className="
+                w-full h-full overflow-hidden shadow-lg
+                rounded-[0_180px_180px_0]
+                md:rounded-[0_220px_220px_0]
+              "
+            >
+              <img
+                src="/kids/outdoor/out1.jpg"
+                alt="Outdoor birthday photography with creative themes and natural light"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
+
         </div>
       </div>
     </section>

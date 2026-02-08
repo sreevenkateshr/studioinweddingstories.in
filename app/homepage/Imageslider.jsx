@@ -8,18 +8,17 @@ import "swiper/css/navigation";
 
 export default function ImageSlider() {
   const images = [
-    "/assets/home/inst1.jpg",
-    "/assets/home/inst2.jpg",
-    "/assets/home/inst3.jpg",
-    "/assets/home/inst4.jpg",
-    "/assets/home/inst5.jpg",
-    "/assets/home/inst6.jpg",
+    "/assets/instapost/insta6.jpeg",
+     "/assets/instapost/insta5.jpeg",
+    "/assets/instapost/insta2.jpeg",
+    "/assets/instapost/insta4.jpeg",
+    "/assets/instapost/insta3.jpeg",
+    "/assets/instapost/insta1.jpeg",
   ];
 
   return (
     <div className="w-full bg-[#f8f9fa]">
       <div className="max-w-6xl mx-auto py-16 px-4">
-        
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
           <a
             href="https://www.instagram.com/"

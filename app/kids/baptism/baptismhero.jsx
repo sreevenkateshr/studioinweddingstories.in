@@ -7,24 +7,21 @@ export default function Baptismhero() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          {/* ================= LEFT IMAGE / VIDEO ================= */}
-          <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px] rounded-2xl overflow-hidden shadow-lg">
-            <img
-              src="/kids/baptism/bap21.jpg" // replace with your image
-              alt="Outdoor Birthday Photography with creative decor"
-              className="w-full h-full object-cover"
-            />
-
-            {/*
-            // Optional YouTube video
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              title="Birthday Outdoor Photography"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-            />
-            */}
+          {/* ================= LEFT IMAGE ================= */}
+          <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px]">
+            <div
+              className="
+                w-full h-full overflow-hidden shadow-lg
+                rounded-[180px_0_0_180px]
+                md:rounded-[220px_0_0_220px]
+              "
+            >
+              <img
+                src="/kids/baptism/bap17.jpg"
+                alt="Baptism Photography"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           {/* ================= RIGHT CONTENT ================= */}

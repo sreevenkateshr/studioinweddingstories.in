@@ -1,58 +1,121 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const testimonials = [
-  { text: "Thank you Zerowatts to capture best moments of our wedding & reception. We loved the pre-wedding shoots and the tradition pictures.", name: "THEEBICA + PURUSHOTH" },
-  { text: "We had the pleasure of working with Zerowatts Photography for our engagement, reception, and wedding. Incredible professionalism!", name: "JEEVITHA + PAWAN" },
-  { text: "They did a wonderful job and made us feel comfortable. Would really love to work with them again :)", name: "PRATIBHA + ASHWANTH" },
-  { text: "Absolutely fantastic photography service! The quality of the pictures is outstanding.", name: "ANITA + RAJESH" },
-  { text: "Professional, creative, and very easy to work with.", name: "DIVYA + KARTHIK" },
-  { text: "Every shot was beautifully framed and perfectly edited.", name: "SNEHA + VIKRAM" },
+  {
+    id: 1,
+    image: "/assets/hometest1.jpeg",
+    date: "October 12, 2019",
+    text:
+      "Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.",
+    author: "Gloria + Nate",
+  },
+  {
+    id: 2,
+    image: "/kids/birthday/birth10.jpg",
+    date: "November 19, 2019",
+    text:
+      "Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi at vero eos.",
+    author: "Diana + Georg",
+  },
+  {
+    id: 3,
+    image: "/kids/birthday/birth10.jpg",
+    date: "December 01, 2019",
+    text:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis vitae feugiat magna, ut mattis ligula praesentium voluptatum.",
+    author: "Emma + Mike",
+  },
 ];
 
-export default function TestimonialsSlider() {
-  const [startIndex, setStartIndex] = useState(0);
-  const visibleCount = 3;
+export default function Testimonials() {
+  const [active, setActive] = useState(0);
 
-  const next = () => setStartIndex((prev) => (prev + visibleCount) % testimonials.length);
-  const prev = () => setStartIndex((prev) => (prev - visibleCount + testimonials.length) % testimonials.length);
-
-  const visibleTestimonials = [];
-  for (let i = 0; i < visibleCount; i++) {
-    visibleTestimonials.push(testimonials[(startIndex + i) % testimonials.length]);
-  }
-
+  // AUTO SLIDE
   useEffect(() => {
-    const interval = setInterval(next, 5000);
-    return () => clearInterval(interval);
-  }, [startIndex]);
+    const timer = setInterval(() => {
+      setActive((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const prevSlide = () =>
+    setActive((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+
+  const nextSlide = () =>
+    setActive((prev) => (prev + 1) % testimonials.length);
 
   return (
-    <div className="bg-[#84a7a1] py-20">
-      <div className="container mx-auto px-6 md:px-20 relative">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif mb- text-white">What Our Clients Say</h2>
-          <p className="text-gray-600 text-white">Hear from the happy couples and families we’ve worked with</p>
-        </div>
+    <section className="bg-white py-32">
+      {/* HEADING */}
+      <div className="text-center mb-20">
+        <h2 className="text-4xl tracking-[0.35em] mb-4 text-black">TESTIMONIALS</h2>
+        <p className="italic text-gray-500">Aliquam phaedrum torquatos</p>
+      </div>
 
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-sm tracking-[0.3em] text-gray-800 uppercase text-white">TESTIMONIALS</h2>
-          <div className="flex space-x-6">
-            <button onClick={prev} className="text-2xl hover:text-gray-600">←</button>
-            <button onClick={next} className="text-2xl hover:text-gray-600">→</button>
-          </div>
-        </div>
+      {/* SLIDER */}
+      <div className="relative max-w-[1400px] mx-auto overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${active * 100}%)` }}
+        >
+          {testimonials.map((item) => (
+            <div
+              key={item.id}
+              className="min-w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            >
+              {/* IMAGE */}
+              <div className="relative h-[320px] md:h-[420px] lg:h-[520px]">
+                <Image
+                  src={item.image}
+                  alt={item.author}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {visibleTestimonials.map((t, idx) => (
-            <div key={idx} className="max-w-sm transition-all duration-500 ease-in-out transform hover:-translate-y-1">
-              <p className="text-lg leading-relaxed text-gray-800 mb-6 text-white">“{t.text}”</p>
-              <p className="tracking-[0.3em] text-gray-900 font-medium text-white">{t.name}</p>
+              {/* TEXT */}
+              <div className="bg-[#83a6a0] p-12 lg:p-20 text-center lg:text-left">
+                <span className="block text-sm mb-6">{item.date}</span>
+
+                <p className="text-lg leading-relaxed mb-10 text-white-700">
+                  {item.text}
+                </p>
+
+                <h6 className="tracking-[0.35em] text-sm">
+                  {item.author}
+                </h6>
+              </div>
             </div>
           ))}
         </div>
+
+        {/* NAVIGATION */}
+        <div className="flex justify-center items-center gap-12 mt-12">
+          <button
+            onClick={prevSlide}
+            className="text-xl hover:opacity-60 transition"
+          >
+            ←
+          </button>
+
+          <span className="text-sm tracking-widest">
+            {String(active + 1).padStart(2, "0")} /{" "}
+            {String(testimonials.length).padStart(2, "0")}
+          </span>
+
+          <button
+            onClick={nextSlide}
+            className="text-xl hover:opacity-60 transition"
+          >
+            →
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,90 +1,115 @@
 "use client";
 
 import Image from "next/image";
-import weddingImg from "@/public/assets/selectedworks/select work 05.webp";
-import preWeddingImg from "@/public/assets/selectedworks/select work 05.webp";
-import postWeddingImg from "@/public/assets/selectedworks/select work 05.webp";
-import maternityImg from "@/public/assets/selectedworks/select work 05.webp";
-import studioinlogo from "@/public/logos/sinblacl.png"; // Correct import
-import banner from "@/public/assets/selectedworks/select work 08.webp"; // Featured banner image
+
+
 
 const sections = [
   {
     title: "Wedding",
     content:
-      "Every wedding is a story of love, laughter, and promises. Our wedding photography captures not just the events but the emotions — the joy in every smile, the tears of happiness, and the little moments that make your day unforgettable. With a blend of artistry and storytelling, we transform your wedding into a collection of timeless memories you’ll treasure forever.",
-    img: weddingImg,
-    imgRight: true,
+      "Every wedding is a story of love, laughter, and promises. Our wedding photography captures timeless emotions.",
+    image: "/assets/banner 05.webp",
+    imageRight: true,
   },
   {
-    title: "Pre-Wedding",
+    title: "Maternity",
     content:
-      "Capture your love story before the big day! Our pre-wedding photography highlights your unique bond with natural and candid shots. We create memories that tell your journey from 'yes' to 'I do'.",
-    img: preWeddingImg,
-    imgRight: false,
+      "Celebrate the beauty of motherhood with elegant maternity photography filled with warmth and grace.",
+    image: "/assets/selectedworks/select work 03.webp",
+    imageRight: false,
   },
   {
-    title: "Post-Wedding",
+    title: "Baptism",
     content:
-      "Celebrate the beginning of your married life with stunning post-wedding shoots. We focus on romantic, creative, and cinematic visuals that immortalize your love and joy.",
-    img: postWeddingImg,
-    imgRight: true,
+      "Pure and emotional moments captured beautifully to preserve your child’s special day forever.",
+    image: "/kids/baptism/bap17.jpg",
+    imageRight: true,
+  },
+  {
+    title: "Modeling",
+    content:
+      "Professional modeling shoots with creative direction and editorial storytelling.",
+    image: "/assets/selectedworks/select work 01.webp",
+    imageRight: false,
   },
   {
     title: "Other Events",
     content:
-      "From maternity shoots to birthdays and special celebrations, we provide professional photography services to capture every cherished moment. Our approach ensures each image tells a story you’ll love revisiting.",
-    img: maternityImg,
-    imgRight: false,
+      "From birthdays to celebrations, we capture every moment with creativity and care.",
+    image: "/assets/home/our service 04.webp",
+    imageRight: true,
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <section className="bg-white">
-      {/* Featured Banner */}
-      <div className="relative w-full h-[60vh] md:h-[80vh]">
+    <section className="bg-white w-full">
+      {/* BANNER */}
+    <section className="relative h-[70vh] w-full">
         <Image
-          src={banner}
-          alt="Featured Banner"
+          src="/assets/banner 03.webp"
+          alt="Portfolio Banner"
           fill
-          priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Our Services
+        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 uppercase">
+            Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
-            Discover timeless memories captured with love, laughter, and creativity.
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl">
+            Explore our best works – where every frame tells a timeless story.
           </p>
         </div>
-      </div>
+      </section>
+   
 
-      {/* Zig-Zag Sections */}
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-20">
-        {sections.map((sec, idx) => (
+      {/* ZIG-ZAG CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 py-32 space-y-40">
+        {sections.map((item, index) => (
           <div
-            key={idx}
-            className={`flex flex-col md:flex-row items-center gap-10 ${
-              sec.imgRight ? "md:flex-row-reverse" : ""
+            key={index}
+            className={`flex flex-col md:flex-row items-center gap-20 ${
+              item.imageRight ? "md:flex-row-reverse" : ""
             }`}
           >
-            {/* Image */}
-            <div className="md:w-1/2 w-full rounded-xl overflow-hidden shadow-lg">
+            {/* TEXT */}
+            <div className="md:w-1/2 w-full text-center">
+              <h2
+                className="text-4xl md:text-5xl mb-8 text-black"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                {item.title}
+              </h2>
+
+              <p className="text-gray-600 leading-relaxed max-w-lg mx-auto mb-10">
+                {item.content}
+              </p>
+
               <Image
-                src={sec.img}
-                alt={sec.title}
-                className="object-cover w-full h-80 md:h-[400px]"
+                src="/logos/sinblacl.png"
+                alt="Studio Logo"
+                width={110}
+                height={45}
+                className="mx-auto"
               />
             </div>
 
-            {/* Content */}
-            <div className="md:w-1/2 w-full text-black space-y-6">
-              <h2 className="text-4xl font-bold">{sec.title}</h2>
-              <p className="text-gray-700 leading-relaxed">{sec.content}</p>
-              <div className="w-32">
-                <Image src={studioinlogo} alt="Studio Logo" className="object-contain" />
+            {/* IMAGE */}
+            <div className="md:w-1/2 w-full">
+              <div
+                className={`relative w-full h-[420px] md:h-[520px] overflow-hidden ${
+                  item.imageRight
+                    ? "rounded-tl-[140px] rounded-br-[140px]"
+                    : "rounded-tr-[140px] rounded-bl-[140px]"
+                }`}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

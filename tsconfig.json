@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/weddings/muslim/page.jsx"  ],
+, "app/weddings/muslim/page.jsx", "app/homepage/LatestStories.jsx"  ],
   "exclude": ["node_modules"]
 }

@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: 12, label: "Locations" },
-  { value: 10000, label: "Weddings", suffix: "+" },
-  { value: 200, label: "Employees", prefix: "+" },
-  { value: 1, label: "Dream" }
+  { value: 12, label: "BRANCHES IN TAMIL NADU" },
+  { value: 860, label: "COMPLETE WEDDINGS" },
+  { value: 18, label: "YEARS EXPERIENCE" },
+  { value: 95, label: "TEAM MEMBERS" },
+  { value: 1200, label: "HAPPY FAMILIES" },
 ];
 
 export default function DreamCounter() {
@@ -14,43 +15,72 @@ export default function DreamCounter() {
 
   useEffect(() => {
     stats.forEach((stat, index) => {
-      let start = 0;
+      let current = 0;
       const end = stat.value;
-      const duration = 2000;
-      const increment = Math.ceil(end / (duration / 16));
+      const step = Math.max(1, Math.floor(end / 50));
 
-      const counter = setInterval(() => {
-        start += increment;
-        if (start >= end) {
-          start = end;
-          clearInterval(counter);
+      const interval = setInterval(() => {
+        current += step;
+        if (current >= end) {
+          current = end;
+          clearInterval(interval);
         }
 
-        setCounts(prev => {
-          const updated = [...prev];
-          updated[index] = start;
-          return updated;
+        setCounts((prev) => {
+          const copy = [...prev];
+          copy[index] = current;
+          return copy;
         });
-      }, 16);
+      }, 30);
     });
   }, []);
 
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+    <section className="bg-white py-20 md:py-28">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-16 gap-x-6 text-center">
+
           {stats.map((stat, i) => (
-            <div key={i}>
-              <h3 className="text-4xl md:text-5xl font-semibold tracking-tight text-black">
-                {stat.prefix}
-                {counts[i].toLocaleString()}
-                {stat.suffix}
-              </h3>
-              <p className="mt-2 text-sm uppercase tracking-widest text-gray-500">
+            <div
+              key={i}
+              className="relative flex items-center justify-center min-h-[120px]"
+            >
+              {/* BACKGROUND NUMBER */}
+              <span
+                className="
+                  absolute
+                  font-serif
+                  text-[#83a6a0]
+                  font-family: Cormorant Garamond, serif;
+                  opacity-1%
+                  leading-none
+                  select-none
+                  text-[clamp(56px,10vw,120px)]
+                "
+              >
+                {counts[i]}
+              </span>
+
+              {/* LABEL */}
+              <p
+                className="
+                  relative
+                  z-10
+                  max-w-[140px]
+                  mx-auto
+                  text-[10px]
+                  md:text-[11px]
+                  tracking-[0.32em]
+                  uppercase
+                  text-[#2f2f2f]
+                "
+              >
                 {stat.label}
               </p>
             </div>
           ))}
+
         </div>
       </div>
     </section>

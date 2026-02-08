@@ -44,7 +44,7 @@ const Navbar = () => {
         </Link>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex gap-8 font-medium text-white">
+        <ul className="hidden md:flex gap-8 font-playfair text-white ">
           <li className="hover:text-purple-500">
             <Link href="/service">Services</Link>
           </li>
@@ -53,6 +53,9 @@ const Navbar = () => {
           </li>
           <li className="hover:text-purple-500">
             <Link href="/about">About Us</Link>
+          </li>
+           <li className="hover:text-purple-500">
+            <Link href="/portfolio">Porfolio</Link>
           </li>
           <li className="hover:text-purple-500">
             <Link href="/testimonials">Testimonials</Link>
@@ -117,6 +120,11 @@ const Navbar = () => {
               <li>
                 <Link href="/about" onClick={() => setOpen(false)}>
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio" onClick={() => setOpen(false)}>
+                  Porfolio
                 </Link>
               </li>
               <li>

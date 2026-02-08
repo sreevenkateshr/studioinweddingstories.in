@@ -6,19 +6,19 @@ const images = [
   { src: "/kids/indoor/ind1.jpg" },
   { src: "/kids/indoor/ind2.jpg" },
   { src: "/kids/indoor/ind3.jpg" },
-  { src: "/kids/indoor/ind4.jpg" },
-  { src: "/kids/indoor/ind5.jpg" },
+  { src: "/kids/indoor/indorg4.jpg" },
+  { src: "/kids/indoor/indorg5.jpg" },
   { src: "/kids/indoor/ind6.jpg" },
 
   { src: "/kids/indoor/ind7.jpg" },
   { src: "/kids/indoor/ind8.jpg" },
   { src: "/kids/indoor/ind9.jpg" },
 
-  { src: "/kids/indoor/ind10.jpg" },
-  { src: "/kids/indoor/ind11.jpg" },
+  { src: "/kids/indoor/indorg10.jpg" },
+  { src: "/kids/indoor/indorg11.jpg" },
   
-  { src: "/kids/indoor/ind13.jpg" },
-  { src: "/kids/indoor/ind14.jpg" },
+  { src: "/kids/indoor/indorg13.jpg" },
+  { src: "/kids/indoor/indorg14.jpg" },
 //   { src: "/kids/indoor/ind15.jpg" },
   { src: "/kids/indoor/ind6.jpg" },
 

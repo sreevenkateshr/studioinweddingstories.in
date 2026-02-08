@@ -22,14 +22,10 @@ const images = [
   { src: "/kids/baptism/bap14.jpg" },
   { src: "/kids/baptism/bap15.jpg" },
   { src: "/kids/baptism/bap16.jpg" },
-
   { src: "/kids/baptism/bap18.jpg" },
   { src: "/kids/baptism/bap19.jpg" },
-
   { src: "/kids/baptism/bap20.jpg" },
-
   { src: "/kids/baptism/bap21.jpg" },
-
   { src: "/kids/baptism/bap22.jpg" },
 ];
 
