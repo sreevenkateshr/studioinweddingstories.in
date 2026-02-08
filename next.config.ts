@@ -14,13 +14,17 @@ const nextConfig = {
         hostname: "images.unsplash.com",
         pathname: "**",
       },
-      // ✅ ADD THIS
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
         pathname: "**",
       },
     ],
+  },
+  experimental: {
+    turbopack: {
+      root: __dirname, // explicitly sets workspace root to your project folder
+    },
   },
 };
 

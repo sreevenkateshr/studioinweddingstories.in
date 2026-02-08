@@ -69,7 +69,7 @@ const BlogSection = () => {
               key={blog.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
             >
-              <Image
+              <img
                 src={blog.image}
                 alt={blog.title}
                 className="w-full h-56 object-cover"
