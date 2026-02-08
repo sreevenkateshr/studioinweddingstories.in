@@ -12,12 +12,14 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen w-screen overflow-hidden">
+      {/* ================= VIDEO BACKGROUND ================= */}
       <div className="absolute inset-0 -z-10">
         <iframe
-          className="absolute top-1/2 left-1/2 
-                     min-w-[177.77vh] min-h-[56.25vw]
-                     w-auto h-auto 
-                     -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2
+                     w-[177.77vh] h-[100vh] 
+                     max-w-none max-h-none
+                     -translate-x-1/2 -translate-y-1/2
+                     sm:w-[200vw] sm:h-[112.5vw] md:w-[177.77vh] md:h-[100vh]"
           src="https://www.youtube.com/embed/7s_G5rikLRA?autoplay=1&mute=1&controls=0&loop=1&playlist=7s_G5rikLRA&rel=0&modestbranding=1&playsinline=1"
           title="Studio.in Wedding Photography"
           frameBorder="0"
