@@ -42,7 +42,6 @@ export default function HeroSection() {
         </a>
       </div>
 
-      {/* ================= SCROLL ARROW ================= */}
       <div
         onClick={handleDownArrowClick}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
