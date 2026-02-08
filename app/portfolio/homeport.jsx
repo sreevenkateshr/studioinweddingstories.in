@@ -12,13 +12,13 @@ export default function Portfolio() {
       link: "/portfolio/lani&sophia",
       
     },
+    // {
+    //   title: "Event Moments",
+    //   img: "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770545328/wed06_pifmy9.jpg",
+    //   link: "/portfolio/sundar&devi",
+    // },
     {
-      title: "Event Moments",
-      img: "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770545328/wed06_pifmy9.jpg",
-      link: "/portfolio/sundar&devi",
-    },
-    {
-      title: "Kids Portraits",
+      title: "Baptism",
       img: "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770546535/S_IN7917_nhbrwg.jpg",
       link: "/portfolio/baptism",
     },

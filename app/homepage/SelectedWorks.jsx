@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,21 +27,41 @@ const photos = [
 ];
 
 export default function SelectedWorks() {
+  // Track which image is tapped (for mobile)
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleTap = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null); // toggle off
+    } else {
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <section className="py-20 px-4 md:px-10 bg-white font-spectral text-center">
-      <h2 className="text-xl text-gray-500 text-sm tracking-wider uppercase mb-8">
+      <h2 className="text-xl text-gray-500 tracking-wider uppercase mb-8">
         Selected works
       </h2>
 
       <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 max-w-7xl mx-auto">
         {photos.map((src, index) => (
-          <div key={index} className="break-inside-avoid mb-4">
+          <div
+            key={index}
+            className="break-inside-avoid mb-4 cursor-pointer"
+            onClick={() => handleTap(index)}
+          >
             <Image
               src={src}
               width={500}
               height={700}
               alt={`photo-${index}`}
-              className="w-full h-auto rounded-lg object-cover shadow filter grayscale hover:grayscale-0 transition duration-500"
+              className={`
+                w-full h-auto rounded-lg object-cover shadow filter
+                transition duration-500
+                ${activeIndex === index ? "grayscale-0" : "grayscale"}
+                hover:grayscale-0
+              `}
             />
           </div>
         ))}

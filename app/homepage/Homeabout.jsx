@@ -47,7 +47,7 @@ export default function AboutSection() {
           </p>
 
           {/* ✅ Next.js navigation */}
-          <Link href="/aboutus">
+          <Link href="/about">
             <button className="px-6 py-2 border border-black rounded-full text-sm tracking-wide hover:bg-black hover:text-white transition duration-300">
               Learn More
             </button>
