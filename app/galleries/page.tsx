@@ -1,58 +1,50 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const albums = [
   {
     title: "PHOTOGRAPHER",
     subtitle: "Happiness",
-    href: "/albums/photographer",
     image: "/assets/selectedworks/select work 01.webp",
     size: "xl",
   },
   {
     title: "BIG DAY",
-    href: "/albums/big-day",
     image: "/assets/selectedworks/select work 13.webp",
   },
   {
     title: "FRIEND",
-    href: "/albums/friend",
     image: "/assets/selectedworks/select work 20.webp",
   },
   {
     title: "ROSES",
-    href: "/albums/roses",
     image: "/assets/selectedworks/select work 09.webp",
   },
   {
     title: "WEDDING",
-    href: "/albums/wedding",
     image: "/assets/selectedworks/select work 04.webp",
   },
   {
     title: "CREATIVE STYLING",
-    href: "/albums/styling",
     image: "/assets/selectedworks/select work 19.webp",
   },
   {
     title: "JUST US",
-    href: "/albums/just-us",
     image: "/assets/selectedworks/select work 05.webp",
   },
   {
     title: "SPRING WEDDING",
-    href: "/albums/spring",
     image: "/assets/selectedworks/select work 15.webp",
   },
 ];
 
 export default function SelectedWorks() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // 🔥 FIX: Non-passive wheel listener (trackpad compatible)
+  // 🔥 Non-passive wheel listener for trackpad scrolling
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -65,9 +57,13 @@ export default function SelectedWorks() {
     };
 
     el.addEventListener("wheel", onWheel, { passive: false });
-
     return () => el.removeEventListener("wheel", onWheel);
   }, []);
+
+  const handleTap = (index: number) => {
+    if (activeIndex === index) setActiveIndex(null);
+    else setActiveIndex(index);
+  };
 
   return (
     <>
@@ -97,13 +93,13 @@ export default function SelectedWorks() {
           className="flex gap-20 px-20 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
         >
           {albums.map((item, index) => (
-            <Link
+            <div
               key={index}
-              href={item.href}
-              className="group flex-shrink-0"
+              className="group flex-shrink-0 cursor-pointer"
+              onClick={() => handleTap(index)}
             >
               <div
-                className={`relative overflow-hidden ${
+                className={`relative overflow-hidden rounded-lg shadow ${
                   item.size === "xl"
                     ? "w-[420px] h-[560px]"
                     : "w-[280px] h-[360px]"
@@ -113,22 +109,24 @@ export default function SelectedWorks() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className={`object-cover transition duration-500 ${
+                    activeIndex === index
+                      ? "filter-none" // tapped → color
+                      : "filter grayscale group-hover:grayscale-0" // default grayscale
+                  }`}
                 />
               </div>
 
               {/* TEXT */}
               <div className="mt-6 text-center">
                 {item.subtitle && (
-                  <p className="italic text-gray-400 mb-1">
-                    {item.subtitle}
-                  </p>
+                  <p className="italic text-gray-400 mb-1">{item.subtitle}</p>
                 )}
                 <h3 className="tracking-[0.3em] text-sm text-gray-800">
                   {item.title}
                 </h3>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>

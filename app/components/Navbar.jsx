@@ -147,7 +147,7 @@ const Navbar = () => {
                 </button>
               </a>
 
-              <a href="tel:6374926377" className="w-full">
+              <a href="tel:9597508874" className="w-full">
                 <button className="w-full py-3 text-lg font-semibold bg-white text-black rounded-xl transition">
                   Book Now
                 </button>
