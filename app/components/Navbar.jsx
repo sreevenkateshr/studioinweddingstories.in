@@ -12,6 +12,7 @@ import studioinlogoWhite from "../../public/logos/sinwhite.png";
 import {
   FaFacebookF,
   FaInstagram,
+  FaYoutube,
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
@@ -54,7 +55,7 @@ const Navbar = () => {
           <li className="hover:text-purple-500">
             <Link href="/about">About Us</Link>
           </li>
-           <li className="hover:text-purple-500">
+          <li className="hover:text-purple-500">
             <Link href="/portfolio">Porfolio</Link>
           </li>
           <li className="hover:text-purple-500">
@@ -106,7 +107,7 @@ const Navbar = () => {
             </div>
 
             {/* MENU LINKS */}
-            <ul className="flex flex-col items-center gap-6 text-white text-xl font-semibold">
+            <ul className="flex flex-col items-center gap-6 text-white text-xl font-playfair">
               <li>
                 <Link href="/service" onClick={() => setOpen(false)}>
                   Services
@@ -142,13 +143,13 @@ const Navbar = () => {
             {/* MOBILE BUTTONS */}
             <div className="flex flex-col items-center gap-4 mt-8 w-full">
               <a href="/contact" className="w-full">
-                <button className="w-full py-3 text-lg font-semibold border border-white rounded-xl hover:bg-white/20 transition">
+                <button className="w-full py-3 text-lg font-playfair border border-white rounded-xl hover:bg-white/20 transition">
                   Get in Touch
                 </button>
               </a>
 
               <a href="tel:9597508874" className="w-full">
-                <button className="w-full py-3 text-lg font-semibold bg-white text-black rounded-xl transition">
+                <button className="w-full py-3 text-lg font-playfair bg-white text-black rounded-xl transition">
                   Book Now
                 </button>
               </a>
@@ -157,7 +158,7 @@ const Navbar = () => {
             {/* SOCIAL ICONS */}
             <div className="flex gap-6 mt-12">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/studio.in26?rdid=FBYj4scHwcY8nLTU&share_url=https%3A%2F%2Fwww.facebook.%2Fshare%2F1GYrxxnafY%2F#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-200"
@@ -165,7 +166,7 @@ const Navbar = () => {
                 <FaFacebookF size={20} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/studio_.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-200"
@@ -173,21 +174,27 @@ const Navbar = () => {
                 <FaInstagram size={20} />
               </a>
               <a
+                href="https://www.youtube.com/@studio.inweddingphotography"
+                className="hover:text-gray-200 transition transform hover:scale-110"
+              >
+                <FaYoutube size={20} />
+              </a>
+              {/* <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-200"
               >
                 <FaLinkedinIn size={20} />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-200"
               >
                 <FaTwitter size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

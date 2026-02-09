@@ -133,7 +133,7 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="flex gap-6 mt-12 justify-center text-white text-2xl">
-          <a href="https://www.instagram.com/studio_.in" className="hover:text-gray-200 transition transform hover:scale-110">
+          <a href="https://www.facebook.com/studio.in26?rdid=FBYj4scHwcY8nLTU&share_url=https%3A%2F%2Fwww.facebook.%2Fshare%2F1GYrxxnafY%2F#" className="hover:text-gray-200 transition transform hover:scale-110">
             <FaFacebookF />
           </a>
           <a href="https://www.instagram.com/studio_.in" className="hover:text-gray-200 transition transform hover:scale-110">
@@ -149,7 +149,7 @@ export default function Footer() {
           <p className="text-white text-sm">©2026 StudioIn. All rights reserved.</p>
           <p className="text-sm mt-2 md:mt-0">
             Powered by{" "}
-            <a href="https://sreevenkatesh.vercel.app" target="_blank" rel="noopener noreferrer" className="bg-clip-text text-white hover:underline">
+            <a href="" target="_blank" rel="noopener noreferrer" className="bg-clip-text text-white hover:underline">
               Cape Tech Solutions
             </a>
           </p>

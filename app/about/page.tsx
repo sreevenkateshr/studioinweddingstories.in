@@ -1,39 +1,41 @@
-// /app/contact/page.tsx
-import ContactContent from "./index"; // your contact page content
+// /app/about-us/page.tsx
+import AboutContent from "./index";
 import Head from "next/head";
 
-export default function ContactPage() {
+export default function AboutUsPage() {
   return (
     <>
       <Head>
         {/* Basic Meta */}
-        <title>Contact Us | StudioIn Wedding Stories Photography</title>
+        <title>About Us | StudioIn Wedding Stories Photography</title>
         <meta
           name="description"
-          content="Get in touch with StudioIn Wedding Stories for wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
+          content="StudioIn Wedding Stories offers professional wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
         />
         <meta
           name="keywords"
-          content="contact StudioIn Wedding Stories, wedding photography Nagercoil, pre-wedding photography Kanyakumari, event photography Trivandrum, birthday photography Tirunelveli, professional photographers South India"
+          content="StudioIn Wedding Stories, wedding photography Nagercoil, pre-wedding photography Nagercoil, event photography Kanyakumari, birthday photography Trivandrum, professional photographers Tirunelveli, photography South India"
         />
-        <link rel="canonical" href="https://www.studioinweddingstories.in/contact" />
+        <link rel="canonical" href="https://www.studioinweddingstories.in/about-us" />
 
         {/* Favicons / App Icons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/studioin-logo.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+ {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en" />
-        <meta property="og:title" content="Contact Us | StudioIn Wedding Stories Photography" />
+        <meta property="og:title" content="About Us | StudioIn Wedding Stories Photography" />
         <meta
           property="og:description"
-          content="Get in touch with StudioIn Wedding Stories for wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
+          content="StudioIn Wedding Stories offers professional wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
         />
         <meta property="og:site_name" content="StudioIn Wedding Stories" />
-        <meta property="og:url" content="https://www.studioinweddingstories.in/contact" />
+        <meta property="og:url" content="https://www.studioinweddingstories.in/about-us" />
         <meta property="og:image" content="/studioin-logo.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -42,10 +44,10 @@ export default function ContactPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@studioinwedding" />
         <meta name="twitter:site" content="StudioIn Wedding Stories" />
-        <meta name="twitter:title" content="Contact Us | StudioIn Wedding Stories Photography" />
+        <meta name="twitter:title" content="About Us | StudioIn Wedding Stories Photography" />
         <meta
           name="twitter:description"
-          content="Get in touch with StudioIn Wedding Stories for wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
+          content="StudioIn Wedding Stories offers professional wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
         />
         <meta name="twitter:image" content="/studioin-logo.png" />
 
@@ -55,8 +57,6 @@ export default function ContactPage() {
         <meta name="geo.placename" content="Nagercoil" />
         <meta name="author" content="StudioIn Wedding Stories" />
         <meta name="copyright" content="StudioIn Wedding Stories" />
- {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w" />
 
         {/* JSON-LD Structured Data */}
         <script
@@ -67,7 +67,7 @@ export default function ContactPage() {
               "@type": "ProfessionalService",
               "name": "StudioIn Wedding Stories",
               "image": "https://www.studioinweddingstories.in/studioin-logo.png",
-              "url": "https://www.studioinweddingstories.in/contact",
+              "url": "https://www.studioinweddingstories.in/about-us",
               "telephone": "+91 95975 08874", // replace with actual
               "address": {
                 "@type": "PostalAddress",
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 "https://www.instagram.com/studio_.in",
                 "https://www.youtube.com/@studio.inweddingphotography"
               ],
-              "description": "Get in touch with StudioIn Wedding Stories for wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby.",
+              "description": "StudioIn Wedding Stories offers professional wedding, pre-wedding, and event photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby.",
               "areaServed": [
                 "Nagercoil",
                 "Kanyakumari",
@@ -96,7 +96,7 @@ export default function ContactPage() {
         />
       </Head>
 
-      <ContactContent />
+      <AboutContent />
     </>
   );
 }

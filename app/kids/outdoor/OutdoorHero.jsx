@@ -6,7 +6,6 @@ export default function OutdoorHero() {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
           {/* ================= LEFT CONTENT ================= */}
           <div>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight">
@@ -14,32 +13,17 @@ export default function OutdoorHero() {
             </h1>
 
             <p className="mt-6 text-gray-600 text-base md:text-lg leading-relaxed max-w-xl">
-              Our outdoor birthday photography captures joyful celebrations in
-              natural light with creative themes, vibrant decor, and candid
-              moments that turn special days into timeless memories.
+              Celebrate outdoor birthdays in Nagercoil, Kanyakumari, Trivandrum,
+              Tirunelveli, and surrounding areas with StudioIn Wedding Stories.
+              Our outdoor birthday photography captures joyful garden parties,
+              beach celebrations, poolside fun, and picnic-style themes with
+              vibrant balloon and floral decor, fairy lights, and creative
+              setups. From cake smash sessions and kids’ play area moments to
+              family and friends group portraits, sunset vibes, night sparkle
+              photography, and candid emotion shots, we ensure every moment is
+              beautifully captured, turning your special day into timeless
+              memories.
             </p>
-
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3 text-gray-700">
-              <ul className="space-y-2 list-disc list-inside">
-                <li>Garden Birthday Photography</li>
-                <li>Beach Birthday Photoshoot</li>
-                <li>Balloon & Floral Decor</li>
-                <li>Fairy Light Setup</li>
-                <li>Picnic Style Themes</li>
-                <li>Natural Light Portraits</li>
-                <li>Poolside Celebrations</li>
-              </ul>
-
-              <ul className="space-y-2 list-disc list-inside">
-                <li>Cake Smash Outdoor Shoot</li>
-                <li>Kids Play Area Moments</li>
-                <li>Family & Friends Group Shots</li>
-                <li>Sunset Birthday Vibes</li>
-                <li>Night Sparkle Photography</li>
-                <li>Theme-based Decorations</li>
-                <li>Candid Emotion Shots</li>
-              </ul>
-            </div>
           </div>
 
           {/* ================= RIGHT IMAGE ================= */}
@@ -58,7 +42,6 @@ export default function OutdoorHero() {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>

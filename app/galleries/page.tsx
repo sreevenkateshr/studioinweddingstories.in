@@ -1,142 +1,97 @@
-"use client";
+// app/galleries/page.tsx
+import Head from "next/head";
+import Galleries from "./index";
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-
-const albums = [
-  {
-    title: "THe BRIDE",
-    subtitle: "Capturing Happiness",
-    image: "/assets/selectedworks/select work 01.webp",
-    size: "xl",
-  },
-  {
-    title: "BIG DAY",
-    subtitle: "Moments to Remember",
-    image: "/assets/selectedworks/select work 13.webp",
-  },
-  {
-    title: "HAPPILY ENGAGED",
-    subtitle: "Cherished Bonds",
-    image: "/assets/selectedworks/select work 20.webp",
-  },
-  {
-    title: "ROSES & LOVE",
-    subtitle: "Romantic Touches",
-    image: "/assets/selectedworks/select work 09.webp",
-  },
-  {
-    title: "JUST US",
-    subtitle: "A Beautiful Beginning",
-    image: "/assets/selectedworks/select work 04.webp",
-  },
-  {
-    title: "CREATIVE STYLING",
-    subtitle: "Elegance in Details",
-    image: "/assets/selectedworks/select work 19.webp",
-  },
-  {
-    title: "WEDDING VOWS",
-    subtitle: "Intimate Moments",
-    image: "/assets/selectedworks/select work 05.webp",
-  },
-  {
-    title: "SPRING WEDDING",
-    subtitle: "Fresh Beginnings",
-    image: "/assets/selectedworks/select work 15.webp",
-  },
-];
-
-export default function SelectedWorks() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  // 🔥 Non-passive wheel listener for trackpad scrolling
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    const onWheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
-    };
-
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => el.removeEventListener("wheel", onWheel);
-  }, []);
-
-  const handleTap = (index: number) => {
-    if (activeIndex === index) setActiveIndex(null);
-    else setActiveIndex(index);
-  };
-
+export default function GalleryPage() {
   return (
     <>
-      {/* 🌟 FEATURED BANNER */}
-      <section className="relative h-[75vh] w-full">
-        <Image
-          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770577256/Galleries_1_xflrac.png"
-          alt="Gallery Banner"
-          fill
-          priority
-          className="object-cover"
+      <Head>
+        {/* Basic Meta */}
+        <title>Wedding & Event Gallery | StudioIn Wedding Stories</title>
+        <meta
+          name="description"
+          content="Explore StudioIn Wedding Stories gallery featuring professional wedding, pre-wedding, and birthday photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby. Capture timeless memories beautifully."
         />
-        <div className="absolute inset-0 bg-black/20 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-3xl md:text-6xl font-serif text-white mb-4">
-            GALLERIES
-          </h1>
-          <p className="text-gray-200 max-w-2xl text-lg md:text-xl">
-            A curated selection of moments, emotions, and timeless stories.
-          </p>
-        </div>
-      </section>
+        <meta
+          name="keywords"
+          content="wedding photography gallery Nagercoil, pre-wedding photography Kanyakumari, birthday photography Trivandrum, event photography Tirunelveli, professional photographers South India"
+        />
+        <link rel="canonical" href="https://www.studioinweddingstories.in/galleries" />
+ {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w" />
 
-      {/* 🖼️ HORIZONTAL EDITORIAL GALLERY */}
-      <section className="bg-white py-24">
-        <div
-          ref={scrollRef}
-          className="flex gap-20 px-20 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
-        >
-          {albums.map((item, index) => (
-            <div
-              key={index}
-              className="group flex-shrink-0 cursor-pointer"
-              onClick={() => handleTap(index)}
-            >
-              <div
-                className={`relative overflow-hidden rounded-lg shadow ${
-                  item.size === "xl"
-                    ? "w-[420px] h-[560px]"
-                    : "w-[280px] h-[360px]"
-                }`}
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className={`object-cover transition duration-500 ${
-                    activeIndex === index
-                      ? "filter-none" // tapped → color
-                      : "filter grayscale group-hover:grayscale-0" // default grayscale
-                  }`}
-                />
-              </div>
+        {/* Favicons / App Icons */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/studioin-logo.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 
-              {/* TEXT */}
-              <div className="mt-6 text-center">
-                {item.subtitle && (
-                  <p className="italic text-gray-400 mb-1">{item.subtitle}</p>
-                )}
-                <h3 className="tracking-[0.3em] text-sm text-gray-800">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en" />
+        <meta property="og:title" content="Wedding & Event Gallery | StudioIn Wedding Stories" />
+        <meta
+          property="og:description"
+          content="Explore StudioIn Wedding Stories gallery featuring professional wedding, pre-wedding, and birthday photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
+        />
+        <meta property="og:site_name" content="StudioIn Wedding Stories" />
+        <meta property="og:url" content="https://www.studioinweddingstories.in/galleries" />
+        <meta property="og:image" content="/studioin-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@studioinwedding" />
+        <meta name="twitter:site" content="StudioIn Wedding Stories" />
+        <meta name="twitter:title" content="Wedding & Event Gallery | StudioIn Wedding Stories" />
+        <meta
+          name="twitter:description"
+          content="Explore StudioIn Wedding Stories gallery featuring professional wedding, pre-wedding, and birthday photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
+        />
+        <meta name="twitter:image" content="/studioin-logo.png" />
+
+        {/* Geo / Misc */}
+        <meta name="geo.country" content="India" />
+        <meta name="geo.region" content="IN-TN" />
+        <meta name="geo.placename" content="Nagercoil" />
+        <meta name="author" content="StudioIn Wedding Stories" />
+        <meta name="copyright" content="StudioIn Wedding Stories" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "StudioIn Wedding Stories",
+              image: "https://www.studioinweddingstories.in/studioin-logo.png",
+              url: "https://www.studioinweddingstories.in/galleries",
+              telephone: "+91 95975 08874",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "StudioIn Wedding Photography, 3HP2+H7C, Church Rd, Kanniyakumari, Tamil Nadu 629702",
+                addressLocality: "Nagercoil",
+                addressRegion: "Tamil Nadu",
+                postalCode: "629001",
+                addressCountry: "IN"
+              },
+              sameAs: [
+                "https://www.facebook.com/studio.in26",
+                "https://www.instagram.com/studio_.in",
+                "https://www.youtube.com/@studio.inweddingphotography"
+              ],
+              description: "Explore StudioIn Wedding Stories gallery featuring professional wedding, pre-wedding, and birthday photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby.",
+              areaServed: ["Nagercoil","Kanyakumari","Trivandrum","Tirunelveli","Marthandam","South India"]
+            })
+          }}
+        />
+      </Head>
+
+      <main className="overflow-hidden">
+        <Galleries />
+      </main>
     </>
   );
 }

@@ -26,9 +26,9 @@ export default function BirthdayHero() {
 
           {/* ================= RIGHT CONTENT ================= */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight">
               Birthday Outdoor <br /> Photography
-            </h2>
+            </h1>
 
             <p className="mt-6 text-gray-600 text-base md:text-lg leading-relaxed max-w-xl">
               Celebrate your special day with creative outdoor birthday themes

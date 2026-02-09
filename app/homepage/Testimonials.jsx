@@ -6,21 +6,21 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    image: "/assets/hometest1.jpeg",
+    image: "/assets/hometest1.jpg",
     date: "October 26, 2025",
     text: "Studio.in captured every moment of our wedding beautifully. The team was professional, friendly, and creative, making our day unforgettable.",
     author: "Sundar + Devi",
   },
   {
     id: 2,
-    image: "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770552062/S_IN8183_vofcex.jpg",
+    image: "/assets/hometest2.jpg",
     date: "November 19, 2025",
     text: "We are thrilled with our photos! Every detail was perfectly captured, and the team made the entire experience smooth and enjoyable.",
     author: "Japhet Elron Parents",
   },
   {
     id: 3,
-    image: "/kids/birthday/birth10.jpg",
+    image: "/assets/hometest3.jpg",
     date: "January 11, 2026",
     text: "Amazing work! Studio.in captured the joy and emotion perfectly. We will treasure these memories forever.",
     author: "Lahiz Parents",

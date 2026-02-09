@@ -26,36 +26,14 @@ export default function Baptismhero() {
 
           {/* ================= RIGHT CONTENT ================= */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight">
-              Birthday Outdoor <br /> Photography
-            </h2>
+            <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight">
+              Baptism  <br /> Photography
+            </h1>
 
             <p className="mt-6 text-gray-600 text-base md:text-lg leading-relaxed max-w-xl">
-              Celebrate your special day with creative outdoor birthday themes
-              and natural light photography.
-            </p>
+  Celebrate your child’s special day with professional outdoor birthday photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli, and surrounding areas. Our creative themes include garden parties, beach celebrations, poolside fun, floral and fairy-light backdrops, cake smash sessions, and candid family moments. Capture joyful memories with natural light, playful setups, and beautiful themed decor, making every birthday truly unforgettable.
+</p>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3 text-gray-700">
-              <ul className="space-y-2 list-disc list-inside">
-                <li>Garden Party</li>
-                <li>Balloon Setup</li>
-                <li>Beach Celebration</li>
-                <li>Fairy Lights</li>
-                <li>Picnic Style</li>
-                <li>Floral Backdrop</li>
-                <li>Poolside Party</li>
-              </ul>
-
-              <ul className="space-y-2 list-disc list-inside">
-                <li>Cake Smash</li>
-                <li>Kids’ Play Area</li>
-                <li>Family Moments</li>
-                <li>Sunset Vibes</li>
-                <li>Night Sparkles</li>
-                <li>Friends Group Shots</li>
-                <li>Theme-based Decor</li>
-              </ul>
-            </div>
           </div>
 
         </div>

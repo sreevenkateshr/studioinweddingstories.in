@@ -1,120 +1,103 @@
-"use client";
+// app/services/page.jsx
+import Head from "next/head";
+import ServicesPage from "./index";
 
-import Image from "next/image";
-
-
-const sections = [
-  {
-    title: "Wedding",
-    content:
-      "Every wedding is a beautiful story of love, laughter, and lifelong promises. Based in Nagercoil and serving across Kanyakumari and all over Tamil Nadu, our wedding photography focuses on capturing real emotions  the happy tears, genuine smiles, and heartfelt moments that make your day unforgettable. With an artistic and storytelling approach, we create timeless wedding memories you will cherish forever. We also travel worldwide to document destination weddings with the same passion and care.",
-    image: "/assets/banner 05.webp",
-    imageRight: true,
-  },
-  {
-    title: "Maternity",
-    content:
-      "Celebrate the magical journey of motherhood with our maternity photography services in Nagercoil, Kanyakumari, and across Tamil Nadu. We capture elegant, natural, and emotional moments that reflect the beauty, strength, and warmth of this special phase. Whether at home or an outdoor location, we create soulful maternity portraits that become lifelong memories. Worldwide travel available for maternity shoots.",
-    image: "/assets/selectedworks/select work 03.webp",
-    imageRight: false,
-  },
-  {
-    title: "Baptism",
-    content:
-      "Baptism is a sacred and emotional milestone in your child’s life. Our baptism photography services in Nagercoil and Kanyakumari focus on preserving pure emotions, meaningful rituals, and heartfelt family moments. Serving churches and families across Tamil Nadu, we ensure every precious detail is captured beautifully, creating timeless memories you can relive forever.",
-    image: "/kids/baptism/bap17.jpg",
-    imageRight: true,
-  },
-  {
-    title: "Modeling",
-    content:
-      "Our professional modeling photography services offer creative direction, cinematic lighting, and editorial storytelling. Based in Nagercoil and working across Tamil Nadu, we help aspiring and professional models build strong portfolios that stand out. From fashion to lifestyle shoots, we deliver high-quality visuals with a modern and artistic touch. Available for national and international projects.",
-    image: "/assets/selectedworks/select work 01.webp",
-    imageRight: false,
-  },
-  {
-    title: "Other Events",
-    content:
-      "From birthdays and engagements to family celebrations and corporate events, we provide professional event photography services in Nagercoil, Kanyakumari, and all over Tamil Nadu. Every event is captured with creativity, attention to detail, and genuine emotion. We also travel worldwide to cover special occasions, ensuring your moments are preserved beautifully, wherever they happen.",
-    image: "/assets/home/our service 04.webp",
-    imageRight: true,
-  },
-];
-
-
-export default function ServicesPage() {
+export default function Services() {
   return (
-    <section className="bg-white w-full">
-      {/* BANNER */}
-    <section className="relative h-[70vh] w-full">
-        <Image
-          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770579065/service_q4xj67.png"
-          alt="Portfolio Banner"
-          fill
-          className="object-cover"
+    <>
+      <Head>
+        {/* Basic Meta */}
+        <title>Services | StudioIn Wedding Stories</title>
+        <meta
+          name="description"
+          content="StudioIn Wedding Stories offers professional wedding, birthday, kids, and event photography services in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby areas."
         />
-        <div className="absolute inset-0 bg-black/20 flex flex-col justify-center items-center text-center px-6">
-          <h1 className="text-5xl md:text-7xl font-serif text-white mb-4 uppercase">
-            Services
-          </h1>
-          <p className="text-lg md:text-xl  font-serif text-gray-200 max-w-3xl">
-            Explore our best works  where every frame tells a timeless story.
-          </p>
-        </div>
-      </section>
-   
+        <meta
+          name="keywords"
+          content="StudioIn Wedding Stories, wedding photography services Nagercoil, birthday photography services Kanyakumari, kids photography Trivandrum, event photography Tirunelveli, professional photographers South India"
+        />
+        <link rel="canonical" href="https://www.studioinweddingstories.in/services" />
 
-      {/* ZIG-ZAG CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 py-32 space-y-40">
-        {sections.map((item, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-center gap-20 ${
-              item.imageRight ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            {/* TEXT */}
-            <div className="md:w-1/2 w-full text-center">
-              <h2
-                className="text-4xl md:text-5xl mb-8 text-black"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                {item.title}
-              </h2>
+        {/* Favicons / App Icons */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/studioin-logo.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 
-              <p className="text-gray-600 leading-relaxed max-w-lg mx-auto mb-10">
-                {item.content}
-              </p>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en" />
+        <meta property="og:title" content="Services | StudioIn Wedding Stories" />
+        <meta
+          property="og:description"
+          content="StudioIn Wedding Stories offers professional wedding, birthday, kids, and event photography services in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby areas."
+        />
+        <meta property="og:site_name" content="StudioIn Wedding Stories" />
+        <meta property="og:url" content="https://www.studioinweddingstories.in/services" />
+        <meta property="og:image" content="/studioin-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+ {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w" />
 
-              <Image
-                src="/logos/sinblacl.png"
-                alt="Studio Logo"
-                width={110}
-                height={45}
-                className="mx-auto"
-              />
-            </div>
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@studioinwedding" />
+        <meta name="twitter:site" content="StudioIn Wedding Stories" />
+        <meta name="twitter:title" content="Services | StudioIn Wedding Stories" />
+        <meta
+          name="twitter:description"
+          content="StudioIn Wedding Stories offers professional wedding, birthday, kids, and event photography services in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby areas."
+        />
+        <meta name="twitter:image" content="/studioin-logo.png" />
 
-            {/* IMAGE */}
-            <div className="md:w-1/2 w-full">
-              <div
-                className={`relative w-full h-[420px] md:h-[520px] overflow-hidden ${
-                  item.imageRight
-                    ? "rounded-tl-[140px] rounded-br-[140px]"
-                    : "rounded-tr-[140px] rounded-bl-[140px]"
-                }`}
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+        {/* Geo / Misc */}
+        <meta name="geo.country" content="India" />
+        <meta name="geo.region" content="IN-TN" />
+        <meta name="geo.placename" content="Nagercoil" />
+        <meta name="author" content="StudioIn Wedding Stories" />
+        <meta name="copyright" content="StudioIn Wedding Stories" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "StudioIn Wedding Stories",
+              "image": "https://www.studioinweddingstories.in/studioin-logo.png",
+              "url": "https://www.studioinweddingstories.in/services",
+              "telephone": "+91 95975 08874",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "StudioIn Wedding Photography, 3HP2+H7C, Church Rd, Kanniyakumari, Tamil Nadu 629702",
+                "addressLocality": "Nagercoil",
+                "addressRegion": "Tamil Nadu",
+                "postalCode": "629001",
+                "addressCountry": "IN"
+              },
+              "sameAs": [
+                "https://www.facebook.com/studio.in26",
+                "https://www.instagram.com/studio_.in",
+                "https://www.youtube.com/@studio.inweddingphotography"
+              ],
+              "description": "StudioIn Wedding Stories offers professional wedding, birthday, kids, and event photography services in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby areas.",
+              "areaServed": [
+                "Nagercoil",
+                "Kanyakumari",
+                "Trivandrum",
+                "Tirunelveli",
+                "Marthandam",
+                "South India"
+              ]
+            })
+          }}
+        />
+      </Head>
+
+      {/* Main Page Content */}
+      <ServicesPage />
+    </>
   );
 }
