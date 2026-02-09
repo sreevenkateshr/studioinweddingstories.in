@@ -13,8 +13,6 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
-  FaLinkedinIn,
-  FaTwitter,
 } from "react-icons/fa";
 
 const Navbar = () => {
