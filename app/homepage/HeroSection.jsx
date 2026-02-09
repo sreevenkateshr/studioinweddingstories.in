@@ -31,17 +31,18 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/40 z-10" />
 
       {/* ================= INSTAGRAM ICON ================= */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2 z-20">
+      {/* <div className="absolute left-6 top-1/2 -translate-y-1/2 z-20">
         <a
-          href="https://www.instagram.com/snappy_times_photography/"
+          href="https://www.instagram.com//"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white text-2xl hover:opacity-80 transition"
         >
           <FaInstagram />
         </a>
-      </div>
+      </div> */}
 
+      {/* ================= SCROLL ARROW ================= */}
       <div
         onClick={handleDownArrowClick}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer"

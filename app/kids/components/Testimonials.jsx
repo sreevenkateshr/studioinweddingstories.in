@@ -7,20 +7,16 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    text: `Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
-    at vero eos et vitae fugiat magna, ut ligula.`,
-    author: "DIANA + GEORG",
+    text: `Studio.in made our wedding day unforgettable! Every moment was beautifully captured, and the team was so professional and friendly.`,
+    author: "Diana + Jeffery",
   },
   {
-    text: `At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.`,
-    author: "EMMA + MIKE",
+    text: `We couldn’t have asked for better photographers. They captured the love, laughter, and every tiny detail perfectly!`,
+    author: "Devi + Prasanna",
   },
   {
-    text: `Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.`,
-    author: "GLORIA + NATE",
+    text: `From start to finish, the experience was amazing. Our photos turned out better than we imagined, and we’ll cherish them forever.`,
+    author: "Vijay + Manasa",
   },
 ];
 

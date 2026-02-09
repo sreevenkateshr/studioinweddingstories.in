@@ -40,7 +40,7 @@ export async function POST(request) {
         <body>
           <div class="container">
             <div class="header">
-              <img src="https://studioinweddingphotography-in.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsinwhite.aadb52ea.png&w=3840&q=75" alt="Studio In Wedding Photography" class="logo">
+              <img src="/logos/sinblacl.png" alt="Studio In Wedding Photography" class="logo">
               <h1 style="color: #000; margin: 10px 0;">New Contact Inquiry</h1>
             </div>
 
@@ -74,8 +74,8 @@ export async function POST(request) {
             </div>
 
             <div class="footer">
-              <p>© 2024 Studio In Wedding Photography | Chennai, Tamil Nadu, India</p>
-              <p>Contact: +91 98765 43210 | hello@studioinweddingphotography.in</p>
+              <p>© 2026 Studio In Wedding Photography | Kanyakumari, Tamil Nadu, India</p>
+              <p>Contact: +91 95975 08874 | studio.in26@gmail.com</p>
             </div>
           </div>
         </body>

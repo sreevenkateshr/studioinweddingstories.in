@@ -22,7 +22,7 @@ export default function Album1() {
       {/* Banner */}
       <section className="relative h-[60vh]">
         <Image
-          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770545328/wed06_pifmy9.jpg"
+          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770577634/album_01_c19w7n.png"
           alt="Couple Name"
           fill
           priority

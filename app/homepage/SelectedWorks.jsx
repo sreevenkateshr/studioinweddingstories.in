@@ -40,7 +40,8 @@ export default function SelectedWorks() {
 
   return (
     <section className="py-20 px-4 md:px-10 bg-white font-spectral text-center">
-      <h2 className="text-xl text-gray-500 tracking-wider uppercase mb-8">
+      <h2 className="text-xl text-gray-500 tracking-wider uppercase mb-8"
+      style={{ fontFamily: "'Playfair Display', serif" }}>
         Selected works
       </h2>
 

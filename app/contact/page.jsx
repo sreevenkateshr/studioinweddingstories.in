@@ -58,7 +58,7 @@ export default function Contact() {
       {/* ===== FEATURED BANNER ===== */}
       <section className="relative w-full h-[60vh] md:h-[70vh]">
         <Image
-          src="/assets/banner 03.webp"
+          src="/assets/headers/contact.png"
           alt="Featured Banner"
           fill
           className="object-cover"
@@ -66,12 +66,12 @@ export default function Contact() {
         />
 
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-3xl md:text-6xl font-bold text-white mb-4">
+          {/* <h1 className="text-3xl md:text-6xl font-bold text-white mb-4">
             Featured Blog
-          </h1>
-          <p className="text-sm md:text-xl text-gray-200 max-w-2xl">
+          </h1> */}
+          {/* <p className="text-sm md:text-xl text-gray-200 max-w-2xl">
             Discover inspiring stories, behind-the-scenes creativity, and photography tips to level up your visual journey.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -82,7 +82,8 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="text-lg mb-10 text-center">
-            Have questions or want to work with us? Fill out the form below — we’ll respond within 24 hours.
+            Have questions or want to work with us? Fill out the form below —
+            we’ll respond within 24 hours.
           </p>
 
           {success && (
@@ -99,13 +100,21 @@ export default function Contact() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-semibold mb-2">Full Name</label>
+              <label className="block text-sm font-semibold mb-2">
+                Full Name
+              </label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter Your Full Name "
+                onChange={(e) => {
+                  const value = e.target.value;
+                  // allow only letters and spaces
+                  if (/^[a-zA-Z\s]*$/.test(value)) {
+                    handleChange(e);
+                  }
+                }}
+                placeholder="Enter Your Full Name"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
               />
@@ -117,7 +126,13 @@ export default function Contact() {
                 type="email"
                 name="email"
                 value={formData.email}
-                onChange={handleChange}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  // allow only letters and spaces
+                  if (/^[a-zA-Z\s]*$/.test(value)) {
+                    handleChange(e);
+                  }
+                }}
                 placeholder="Enter Your Email Address"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
@@ -125,12 +140,22 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Phone Number</label>
+              <label className="block text-sm font-semibold mb-2">
+                Phone Number
+              </label>
+
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
-                onChange={handleChange}
+                onChange={(e) => {
+                  const value = e.target.value;
+
+                  // allow only digits (0–9)
+                  if (/^\d*$/.test(value)) {
+                    handleChange(e);
+                  }
+                }}
                 placeholder="Enter Your Phone Number"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
@@ -138,7 +163,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Event Date</label>
+              <label className="block text-sm font-semibold mb-2">
+                Event Date
+              </label>
               <input
                 type="date"
                 name="eventDate"
@@ -150,7 +177,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Message</label>
+              <label className="block text-sm font-semibold mb-2">
+                Message
+              </label>
               <textarea
                 rows={4}
                 name="message"
@@ -175,4 +204,3 @@ export default function Contact() {
     </>
   );
 }
-  

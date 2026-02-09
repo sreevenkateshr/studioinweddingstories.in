@@ -7,26 +7,23 @@ const testimonials = [
   {
     id: 1,
     image: "/assets/hometest1.jpeg",
-    date: "October 12, 2019",
-    text:
-      "Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.",
-    author: "Gloria + Nate",
+    date: "October 26, 2025",
+    text: "Studio.in captured every moment of our wedding beautifully. The team was professional, friendly, and creative, making our day unforgettable.",
+    author: "Sundar + Devi",
   },
   {
     id: 2,
-    image: "/kids/birthday/birth10.jpg",
-    date: "November 19, 2019",
-    text:
-      "Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi at vero eos.",
-    author: "Diana + Georg",
+    image: "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770552062/S_IN8183_vofcex.jpg",
+    date: "November 19, 2025",
+    text: "We are thrilled with our photos! Every detail was perfectly captured, and the team made the entire experience smooth and enjoyable.",
+    author: "Japhet Elron Parents",
   },
   {
     id: 3,
     image: "/kids/birthday/birth10.jpg",
-    date: "December 01, 2019",
-    text:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis vitae feugiat magna, ut mattis ligula praesentium voluptatum.",
-    author: "Emma + Mike",
+    date: "January 11, 2026",
+    text: "Amazing work! Studio.in captured the joy and emotion perfectly. We will treasure these memories forever.",
+    author: "Lahiz Parents",
   },
 ];
 
@@ -42,19 +39,21 @@ export default function Testimonials() {
   }, []);
 
   const prevSlide = () =>
-    setActive((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+    setActive((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
-  const nextSlide = () =>
-    setActive((prev) => (prev + 1) % testimonials.length);
+  const nextSlide = () => setActive((prev) => (prev + 1) % testimonials.length);
 
   return (
     <section className="bg-white py-32">
       {/* HEADING */}
       <div className="text-center mb-20">
-        <h2 className="text-4xl tracking-[0.35em] mb-4 text-black">TESTIMONIALS</h2>
-        <p className="italic text-gray-500">Aliquam phaedrum torquatos</p>
+        <h2 className="text-4xl tracking-[0.35em] mb-4 text-black" style={{ fontFamily: "'Playfair Display', serif" }}>
+          TESTIMONIALS
+        </h2>
+        <p className="italic text-gray-500 mb-12">
+          Hear from couples who trusted Studio.in for their wedding memories in
+          Nagercoil & Kanyakumari
+        </p>
       </div>
 
       {/* SLIDER */}
@@ -86,9 +85,7 @@ export default function Testimonials() {
                   {item.text}
                 </p>
 
-                <h6 className="tracking-[0.35em] text-sm">
-                  {item.author}
-                </h6>
+                <h6 className="tracking-[0.35em] text-sm">{item.author}</h6>
               </div>
             </div>
           ))}

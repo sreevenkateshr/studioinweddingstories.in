@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const images = [
   "/assets/about-us-main_11zon.jpg",
@@ -19,7 +20,7 @@ export default function AboutPage() {
       {/* 🔥 Featured Banner Section */}
       <section className="relative h-[80vh] w-full">
         <Image
-          src="https://i0.wp.com/paperboatweddingphotography.com/wp-content/uploads/2024/07/DSC00663.jpg?fit=1920%2C1280&ssl=1"
+          src="/assets/headers/aboutus.png"
           alt="Featured Banner"
           fill
           className="object-cover"
@@ -27,15 +28,18 @@ export default function AboutPage() {
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white uppercase drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-serif text-white uppercase drop-shadow-lg">
             About Us
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-200 max-w-3xl">
+          {/* <p className="mt-4 text-lg md:text-xl font-serif text-gray-200 max-w-3xl">
             Celebrating your special moments with elegance and timeless style.
-          </p>
-          <button className="mt-6 px-8 py-3 border border-white text-white rounded-full tracking-widest text-sm hover:bg-white hover:text-black transition">
+          </p> */}
+          <a
+            href="/contact"
+            className="mt-6 px-8 py-3 border border-white text-white rounded-full tracking-widest text-sm hover:bg-white hover:text-black transition"
+          >
             Explore More
-          </button>
+          </a>
         </div>
       </section>
       {/* 🧭 Main About Section */}
@@ -98,17 +102,12 @@ export default function AboutPage() {
 
             <a
               href="/contact"
-              className="mt-8 w-fit px-8 py-3 bg-[#84a7a1] text-white font-semibold uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition duration-300"
+              className="mt-8 w-fit px-8 py-3 bg-[black] text-white font-semibold uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition duration-300"
             >
               Contact Us
             </a>
 
-            <p className="mt-8 text-gray-800 leading-relaxed text-base md:text-lg">
-              In 2017 we announced our new arrival – the Docu-Film, a perfect
-              completion of your photographic needs.
-            </p>
-
-            <p className="mt-10 text-2xl italic text-[#84a7a1]">— Studio.in</p>
+            {/* <p className="mt-10 text-2xl italic text-[#84a7a1]">— Studio.in</p> */}
           </div>
         </div>
       </section>

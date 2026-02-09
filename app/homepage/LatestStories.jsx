@@ -45,7 +45,8 @@ export default function LatestStories() {
             Portfolio
           </span>
 
-          <h2 className="mb-16 font-cormorant text-4xl sm:text-5xl xl:text-6xl text-black leading-tight">
+          <h2 className="mb-16 font-cormorant text-4xl sm:text-5xl xl:text-6xl text-black leading-tight"
+          style={{ fontFamily: "'Playfair Display', serif" }}>
             Our Latest <br /> Stories
           </h2>
 

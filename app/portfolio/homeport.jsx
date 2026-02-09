@@ -29,18 +29,18 @@ export default function Portfolio() {
       {/* ================= BANNER ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/assets/banner 03.webp"
+          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770578691/portfolio_vsce6a.png"
           alt="Portfolio Banner"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-6">
-          <h1 className="text-5xl md:text-7xl font-cormorant text-white mb-4 uppercase">
+          <h1 className="text-5xl md:text-7xl font-serif text-white mb-4 uppercase">
             Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-3xl">
-            Explore our best works — where every frame tells a timeless story.
+          <p className="text-lg md:text-xl text-gray-200  font-serif max-w-3xl">
+            Explore our best works where every frame tells a timeless story.
           </p>
         </div>
       </section>

@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import heroImage from "@/public/assets/home/last banner.webp"; // ✅ Correct import path for Next.js public folder
 
 export default function SliderHero() {
@@ -21,14 +23,16 @@ export default function SliderHero() {
 
       {/* Text Content */}
       <div className="relative z-10 text-white mr-10 max-w-lg text-right">
-        <h1 className="text-4xl md:text-5xl font-serif leading-snug drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-serif leading-snug drop-shadow-lg">
   Let Your Love Shine <br />
   In the Open <em className="italic">Outdoors</em>
-</h1>
+</h2>
 
-        <button className="mt-6 px-6 py-2 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300">
-        Book Now
-        </button>
+      <Link href="/contact">
+  <button className="mt-6 px-6 py-2 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300">
+    Book Now
+  </button>
+</Link>
       </div>
     </section>
   );

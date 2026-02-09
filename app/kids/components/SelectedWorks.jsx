@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const photos = [
-  "/assets/selectedworks/select work 01.webp",
-  "/assets/selectedworks/select work 13.webp",
-  "/assets/selectedworks/select work 20.webp",
-  "/assets/selectedworks/select work 09.webp",
+  "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770580856/indorg11_kpczn6.jpg",
+  "https://res.cloudinary.com/dd2bavjj3/image/upload/v1770580854/kidswork2_dj7wbw.jpg",
+  "/kids/outdoor/out9.jpg",
+  "/kids/outdoor/out5.jpg",
 ];
 
 export default function SelectedWorks() {

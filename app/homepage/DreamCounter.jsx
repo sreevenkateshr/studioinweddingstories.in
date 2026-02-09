@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: 12, label: "BRANCHES IN TAMIL NADU" },
-  { value: 860, label: "COMPLETE WEDDINGS" },
-  { value: 18, label: "YEARS EXPERIENCE" },
-  { value: 95, label: "TEAM MEMBERS" },
-  { value: 1200, label: "HAPPY FAMILIES" },
+  { value: 2, label: "BRANCHES" },
+  { value: 1500, label: "COMPLETE WEDDINGS" },
+  { value: 8, label: "YEARS EXPERIENCE" },
+  { value: 5, label: "TEAM MEMBERS" },
+  { value: 1500, label: "HAPPY FAMILIES" },
 ];
 
 export default function DreamCounter() {
@@ -73,6 +73,7 @@ export default function DreamCounter() {
                   md:text-[11px]
                   tracking-[0.32em]
                   uppercase
+                  font-blod
                   text-[#2f2f2f]
                 "
               >

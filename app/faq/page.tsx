@@ -55,19 +55,19 @@ export default function HomeFAQ() {
       {/* Featured Banner */}
       <div className="relative w-full h-[50vh] md:h-[60vh]">
         <Image
-           src="/assets/banner 03.webp"
+           src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770578037/cover_pics_di8otg.png"
           alt="FAQ Banner"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+        <div className="absolute inset-0  flex flex-col justify-center items-center text-center px-6">
+          {/* <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             FAQs
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+          </h1> */}
+          {/* <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
             Answers to the most common questions about our photography services.
-          </p>
+          </p> */}
         </div>
       </div>
 

@@ -29,12 +29,12 @@ export default function ImageSlider() {
             Follow us on Instagram
           </a>
           <a
-            href="https://www.instagram.com/studio_.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            href="https://www.instagram.com/little_studio.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noreferrer"
             className="text-black hover:text-black-600 transition duration-300"
           >
-            @Studioinphotography
+            @little_studio.in
           </a>
         </div>
 

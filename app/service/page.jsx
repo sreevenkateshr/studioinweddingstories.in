@@ -3,44 +3,44 @@
 import Image from "next/image";
 
 
-
 const sections = [
   {
     title: "Wedding",
     content:
-      "Every wedding is a story of love, laughter, and promises. Our wedding photography captures timeless emotions.",
+      "Every wedding is a beautiful story of love, laughter, and lifelong promises. Based in Nagercoil and serving across Kanyakumari and all over Tamil Nadu, our wedding photography focuses on capturing real emotions  the happy tears, genuine smiles, and heartfelt moments that make your day unforgettable. With an artistic and storytelling approach, we create timeless wedding memories you will cherish forever. We also travel worldwide to document destination weddings with the same passion and care.",
     image: "/assets/banner 05.webp",
     imageRight: true,
   },
   {
     title: "Maternity",
     content:
-      "Celebrate the beauty of motherhood with elegant maternity photography filled with warmth and grace.",
+      "Celebrate the magical journey of motherhood with our maternity photography services in Nagercoil, Kanyakumari, and across Tamil Nadu. We capture elegant, natural, and emotional moments that reflect the beauty, strength, and warmth of this special phase. Whether at home or an outdoor location, we create soulful maternity portraits that become lifelong memories. Worldwide travel available for maternity shoots.",
     image: "/assets/selectedworks/select work 03.webp",
     imageRight: false,
   },
   {
     title: "Baptism",
     content:
-      "Pure and emotional moments captured beautifully to preserve your child’s special day forever.",
+      "Baptism is a sacred and emotional milestone in your child’s life. Our baptism photography services in Nagercoil and Kanyakumari focus on preserving pure emotions, meaningful rituals, and heartfelt family moments. Serving churches and families across Tamil Nadu, we ensure every precious detail is captured beautifully, creating timeless memories you can relive forever.",
     image: "/kids/baptism/bap17.jpg",
     imageRight: true,
   },
   {
     title: "Modeling",
     content:
-      "Professional modeling shoots with creative direction and editorial storytelling.",
+      "Our professional modeling photography services offer creative direction, cinematic lighting, and editorial storytelling. Based in Nagercoil and working across Tamil Nadu, we help aspiring and professional models build strong portfolios that stand out. From fashion to lifestyle shoots, we deliver high-quality visuals with a modern and artistic touch. Available for national and international projects.",
     image: "/assets/selectedworks/select work 01.webp",
     imageRight: false,
   },
   {
     title: "Other Events",
     content:
-      "From birthdays to celebrations, we capture every moment with creativity and care.",
+      "From birthdays and engagements to family celebrations and corporate events, we provide professional event photography services in Nagercoil, Kanyakumari, and all over Tamil Nadu. Every event is captured with creativity, attention to detail, and genuine emotion. We also travel worldwide to cover special occasions, ensuring your moments are preserved beautifully, wherever they happen.",
     image: "/assets/home/our service 04.webp",
     imageRight: true,
   },
 ];
+
 
 export default function ServicesPage() {
   return (
@@ -48,17 +48,17 @@ export default function ServicesPage() {
       {/* BANNER */}
     <section className="relative h-[70vh] w-full">
         <Image
-          src="/assets/banner 03.webp"
+          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770579065/service_q4xj67.png"
           alt="Portfolio Banner"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-6">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 uppercase">
-            Portfolio
+        <div className="absolute inset-0 bg-black/20 flex flex-col justify-center items-center text-center px-6">
+          <h1 className="text-5xl md:text-7xl font-serif text-white mb-4 uppercase">
+            Services
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-3xl">
-            Explore our best works – where every frame tells a timeless story.
+          <p className="text-lg md:text-xl  font-serif text-gray-200 max-w-3xl">
+            Explore our best works  where every frame tells a timeless story.
           </p>
         </div>
       </section>

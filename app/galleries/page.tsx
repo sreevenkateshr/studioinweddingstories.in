@@ -5,37 +5,44 @@ import { useEffect, useRef, useState } from "react";
 
 const albums = [
   {
-    title: "PHOTOGRAPHER",
-    subtitle: "Happiness",
+    title: "THe BRIDE",
+    subtitle: "Capturing Happiness",
     image: "/assets/selectedworks/select work 01.webp",
     size: "xl",
   },
   {
     title: "BIG DAY",
+    subtitle: "Moments to Remember",
     image: "/assets/selectedworks/select work 13.webp",
   },
   {
-    title: "FRIEND",
+    title: "HAPPILY ENGAGED",
+    subtitle: "Cherished Bonds",
     image: "/assets/selectedworks/select work 20.webp",
   },
   {
-    title: "ROSES",
+    title: "ROSES & LOVE",
+    subtitle: "Romantic Touches",
     image: "/assets/selectedworks/select work 09.webp",
   },
   {
-    title: "WEDDING",
+    title: "JUST US",
+    subtitle: "A Beautiful Beginning",
     image: "/assets/selectedworks/select work 04.webp",
   },
   {
     title: "CREATIVE STYLING",
+    subtitle: "Elegance in Details",
     image: "/assets/selectedworks/select work 19.webp",
   },
   {
-    title: "JUST US",
+    title: "WEDDING VOWS",
+    subtitle: "Intimate Moments",
     image: "/assets/selectedworks/select work 05.webp",
   },
   {
     title: "SPRING WEDDING",
+    subtitle: "Fresh Beginnings",
     image: "/assets/selectedworks/select work 15.webp",
   },
 ];
@@ -70,14 +77,14 @@ export default function SelectedWorks() {
       {/* 🌟 FEATURED BANNER */}
       <section className="relative h-[75vh] w-full">
         <Image
-          src="/assets/banner 03.webp"
+          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770577256/Galleries_1_xflrac.png"
           alt="Gallery Banner"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-white text-5xl md:text-7xl tracking-[0.25em] mb-6">
+        <div className="absolute inset-0 bg-black/20 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-3xl md:text-6xl font-serif text-white mb-4">
             GALLERIES
           </h1>
           <p className="text-gray-200 max-w-2xl text-lg md:text-xl">
