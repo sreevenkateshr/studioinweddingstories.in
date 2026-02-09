@@ -126,13 +126,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 value={formData.email}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  // allow only letters and spaces
-                  if (/^[a-zA-Z\s]*$/.test(value)) {
-                    handleChange(e);
-                  }
-                }}
+                onChange={handleChange} // ✅ just call your handler directly
                 placeholder="Enter Your Email Address"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
