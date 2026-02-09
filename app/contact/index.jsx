@@ -157,18 +157,20 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">
-                Event Date
-              </label>
-              <input
-                type="date"
-                name="eventDate"
-                value={formData.eventDate}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
-              />
-            </div>
+  <label className="block text-sm font-semibold mb-2">
+    Event Date
+  </label>
+  <input
+    type="date"
+    name="eventDate"
+    value={formData.eventDate}
+    onChange={handleChange}
+    required
+    min={new Date().toISOString().split("T")[0]} // ✅ today as minimum date
+    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-black text-black transition"
+  />
+</div>
+
 
             <div>
               <label className="block text-sm font-semibold mb-2">
