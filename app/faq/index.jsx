@@ -48,30 +48,31 @@ const faqs = [
 ];
 
 export default function HomeFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null); // <--- FIX
+  // ✅ Removed TypeScript type annotation
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-gray-50">
-      {/* Featured Banner */}
+    <section className="bg-gray-50 min-h-screen">
+      {/* Banner */}
       <div className="relative w-full h-[50vh] md:h-[60vh]">
         <Image
-           src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770578037/cover_pics_di8otg.png"
+          src="https://res.cloudinary.com/dd2bavjj3/image/upload/v1770578037/cover_pics_di8otg.png"
           alt="FAQ Banner"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0  flex flex-col justify-center items-center text-center px-6">
-          {/* <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white">
             FAQs
-          </h1> */}
-          {/* <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mt-4">
             Answers to the most common questions about our photography services.
-          </p> */}
+          </p>
         </div>
       </div>
 
-      {/* FAQ Accordion */}
+      {/* Accordion */}
       <div className="max-w-4xl mx-auto py-16 px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
           Photography FAQs
@@ -80,6 +81,7 @@ export default function HomeFAQ() {
         <div className="space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
+
             return (
               <div
                 key={index}
