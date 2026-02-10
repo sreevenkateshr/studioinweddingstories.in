@@ -1,11 +1,9 @@
 // /app/about-us/page.tsx
 import AboutContent from "./index";
-import Head from "next/head";
 
 export default function AboutUsPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>About Us | StudioIn Wedding Stories Photography</title>
         <meta
@@ -94,7 +92,6 @@ export default function AboutUsPage() {
             })
           }}
         />
-      </Head>
 
       <AboutContent />
     </>
