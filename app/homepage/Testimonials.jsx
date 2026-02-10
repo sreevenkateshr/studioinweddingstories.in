@@ -30,27 +30,32 @@ const testimonials = [
 export default function Testimonials() {
   const [active, setActive] = useState(0);
 
-  // AUTO SLIDE
+  /* AUTO SLIDE */
   useEffect(() => {
     const timer = setInterval(() => {
       setActive((prev) => (prev + 1) % testimonials.length);
     }, 5000);
+
     return () => clearInterval(timer);
   }, []);
 
   const prevSlide = () =>
     setActive((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
-  const nextSlide = () => setActive((prev) => (prev + 1) % testimonials.length);
+  const nextSlide = () =>
+    setActive((prev) => (prev + 1) % testimonials.length);
 
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-20 sm:py-28 lg:py-32">
       {/* HEADING */}
-      <div className="text-center mb-20">
-        <h2 className="text-4xl tracking-[0.35em] mb-4 text-black" style={{ fontFamily: "'Playfair Display', serif" }}>
+      <div className="text-center mb-14 sm:mb-20 px-4">
+        <h2
+          className="text-2xl sm:text-3xl md:text-4xl tracking-[0.25em] sm:tracking-[0.35em] mb-4 text-black"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
           TESTIMONIALS
         </h2>
-        <p className="italic text-gray-500 mb-12">
+        <p className="italic text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
           Hear from couples who trusted Studio.in for their wedding memories in
           Nagercoil & Kanyakumari
         </p>
@@ -65,42 +70,48 @@ export default function Testimonials() {
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="min-w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+              className="min-w-full grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 items-stretch"
             >
               {/* IMAGE */}
-              <div className="relative h-[320px] md:h-[420px] lg:h-[520px]">
+              <div className="relative h-[260px] sm:h-[340px] md:h-[420px] lg:h-[520px]">
                 <Image
                   src={item.image}
                   alt={item.author}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
 
               {/* TEXT */}
-              <div className="bg-[#83a6a0] p-12 lg:p-20 text-center lg:text-left">
-                <span className="block text-sm mb-6">{item.date}</span>
+              <div className="bg-[#83a6a0] px-6 py-10 sm:px-10 sm:py-14 lg:p-20 text-center lg:text-left flex flex-col justify-center">
+                <span className="block text-xs sm:text-sm mb-4 text-white/80">
+                  {item.date}
+                </span>
 
-                <p className="text-lg leading-relaxed mb-10 text-white-700">
+                <p className="text-sm sm:text-base lg:text-lg leading-relaxed mb-8 text-white">
                   {item.text}
                 </p>
 
-                <h6 className="tracking-[0.35em] text-sm">{item.author}</h6>
+                <h6 className="tracking-[0.25em] sm:tracking-[0.35em] text-xs sm:text-sm text-white font-medium">
+                  {item.author}
+                </h6>
               </div>
             </div>
           ))}
         </div>
 
         {/* NAVIGATION */}
-        <div className="flex justify-center items-center gap-12 mt-12">
+        <div className="flex justify-center items-center gap-10 mt-10 sm:mt-12">
           <button
             onClick={prevSlide}
             className="text-xl hover:opacity-60 transition"
+            aria-label="Previous testimonial"
           >
             ←
           </button>
 
-          <span className="text-sm tracking-widest">
+          <span className="text-xs sm:text-sm tracking-widest text-gray-600">
             {String(active + 1).padStart(2, "0")} /{" "}
             {String(testimonials.length).padStart(2, "0")}
           </span>
@@ -108,6 +119,7 @@ export default function Testimonials() {
           <button
             onClick={nextSlide}
             className="text-xl hover:opacity-60 transition"
+            aria-label="Next testimonial"
           >
             →
           </button>
