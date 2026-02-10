@@ -55,6 +55,14 @@ export default function BirthdayPage() {
       <meta name="author" content="StudioIn Wedding Stories" />
       <meta name="copyright" content="StudioIn Wedding Stories" />
 
+       <meta
+  name="google-site-verification"
+  content="65Lz7SFyW5NbmdJje4UmWs1Ovut1Wf9x28K9iRgWfxk"
+/>
+
+
+
+
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"

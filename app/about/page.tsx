@@ -22,7 +22,11 @@ export default function AboutUsPage() {
         <link rel="apple-touch-icon" href="/studioin-logo.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
  {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w" />
+              <meta
+  name="google-site-verification"
+  content="65Lz7SFyW5NbmdJje4UmWs1Ovut1Wf9x28K9iRgWfxk"
+/>
+
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

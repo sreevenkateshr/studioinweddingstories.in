@@ -73,9 +73,10 @@ export default function HomePage() {
 
       {/* Google Search Console Verification */}
       <meta
-        name="google-site-verification"
-        content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w"
-      />
+  name="google-site-verification"
+  content="65Lz7SFyW5NbmdJje4UmWs1Ovut1Wf9x28K9iRgWfxk"
+/>
+
 
       {/* Geo / Misc */}
       <meta name="geo.country" content="India" />

@@ -54,7 +54,11 @@ export default function ContactPage() {
         <meta name="author" content="StudioIn Wedding Stories" />
         <meta name="copyright" content="StudioIn Wedding Stories" />
  {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="x9PgItRfB4Xnihz7Eq7BK9YdGsEUUwE270Tl2wH980w" />
+               <meta
+  name="google-site-verification"
+  content="65Lz7SFyW5NbmdJje4UmWs1Ovut1Wf9x28K9iRgWfxk"
+/>
+
 
         {/* JSON-LD Structured Data */}
         <script
