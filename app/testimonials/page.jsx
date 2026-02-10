@@ -1,11 +1,9 @@
 // app/testimonials/page.jsx
-import Head from "next/head";
 import TestimonialsSection from "./index";
 
 export default function TestimonialsPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>Testimonials | StudioIn Wedding Stories</title>
         <meta
@@ -95,7 +93,6 @@ export default function TestimonialsPage() {
             })
           }}
         />
-      </Head>
 
       {/* Main Page Content */}
       <TestimonialsSection />

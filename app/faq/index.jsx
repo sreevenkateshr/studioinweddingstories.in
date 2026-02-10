@@ -74,8 +74,8 @@ export default function HomeFAQ() {
 
       {/* Accordion */}
       <div className="max-w-4xl mx-auto py-16 px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-          Photography FAQs
+        <h2 className="text-4xl md:text-5xl font-serif  text-center text-gray-900 mb-12">
+           FAQs
         </h2>
 
         <div className="space-y-4">

@@ -1,16 +1,14 @@
 // /app/faq/page.tsx
 import Faq from "../faq/index";
-import Head from "next/head";
 
 export default function FaqPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>FAQ | StudioIn Wedding Stories Photography</title>
         <meta
           name="description"
-          content="Frequently Asked Questions about StudioIn Wedding Stories' wedding, pre-wedding, birthday, and event photography services in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
+          content="“FAQs on StudioIn Wedding Stories’ wedding, pre-wedding, birthday & event photography services across Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby."
         />
         <meta
           name="keywords"
@@ -92,7 +90,6 @@ export default function FaqPage() {
             })
           }}
         />
-      </Head>
 
       <Faq />
     </>

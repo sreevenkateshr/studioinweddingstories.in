@@ -14,7 +14,7 @@ export default function AboutUsPage() {
           name="keywords"
           content="StudioIn Wedding Stories, wedding photography Nagercoil, pre-wedding photography Nagercoil, event photography Kanyakumari, birthday photography Trivandrum, professional photographers Tirunelveli, photography South India"
         />
-        <link rel="canonical" href="https://www.studioinweddingstories.in/about-us" />
+        <link rel="canonical" href="https://www.studioinweddingstories.in/about" />
 
         {/* Favicons / App Icons */}
         <link rel="icon" href="/favicon.ico" />

@@ -1,14 +1,10 @@
 // app/portfolio/page.jsx
-import Head from "next/head";
 import Homeport from "./homeport";
-// import Album1 from "./album01/Album01";
-// import Album2 from "./album02";
-// import Album3 from "./album03";
+
 
 export default function PortfolioPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>Portfolio | StudioIn Wedding Stories</title>
         <meta
@@ -95,14 +91,11 @@ export default function PortfolioPage() {
             })
           }}
         />
-      </Head>
 
       {/* Page Sections */}
       <main className="overflow-hidden">
         <Homeport />
-        {/* <Album1 /> */}
-        {/* <Album2 /> */}
-        {/* <Album3 /> */}
+  
       </main>
     </>
   );

@@ -1,11 +1,9 @@
 // app/services/page.jsx
-import Head from "next/head";
 import ServicesPage from "./index";
 
 export default function Services() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>Services | StudioIn Wedding Stories</title>
         <meta
@@ -16,7 +14,7 @@ export default function Services() {
           name="keywords"
           content="StudioIn Wedding Stories, wedding photography services Nagercoil, birthday photography services Kanyakumari, kids photography Trivandrum, event photography Tirunelveli, professional photographers South India"
         />
-        <link rel="canonical" href="https://www.studioinweddingstories.in/services" />
+        <link rel="canonical" href="https://www.studioinweddingstories.in/service" />
 
         {/* Favicons / App Icons */}
         <link rel="icon" href="/favicon.ico" />
@@ -33,7 +31,7 @@ export default function Services() {
           content="StudioIn Wedding Stories offers professional wedding, birthday, kids, and event photography services in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby areas."
         />
         <meta property="og:site_name" content="StudioIn Wedding Stories" />
-        <meta property="og:url" content="https://www.studioinweddingstories.in/services" />
+        <meta property="og:url" content="https://www.studioinweddingstories.in/service" />
         <meta property="og:image" content="/studioin-logo.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -67,7 +65,7 @@ export default function Services() {
               "@type": "ProfessionalService",
               "name": "StudioIn Wedding Stories",
               "image": "https://www.studioinweddingstories.in/studioin-logo.png",
-              "url": "https://www.studioinweddingstories.in/services",
+              "url": "https://www.studioinweddingstories.in/service",
               "telephone": "+91 95975 08874",
               "address": {
                 "@type": "PostalAddress",
@@ -94,7 +92,6 @@ export default function Services() {
             })
           }}
         />
-      </Head>
 
       {/* Main Page Content */}
       <ServicesPage />

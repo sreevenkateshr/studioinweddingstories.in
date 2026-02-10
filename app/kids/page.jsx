@@ -1,5 +1,4 @@
 // app/kids/page.jsx
-import Head from "next/head";
 import KidsHero from "./components/KidsHero";
 import AboutSection from "./components/AboutSection";
 import SelectedWorks from "./components/SelectedWorks";
@@ -11,12 +10,12 @@ import InstagramSlider from "./components/InstagramSlider";
 export default function KidsPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
-        <title>Kids Photography | StudioIn Wedding Stories Nagercoil</title>
+        <title>Kids Photography | Little StudioIn Wedding Stories Nagercoil</title>
         <meta
           name="description"
-          content="StudioIn Wedding Stories offers professional kids and family photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby. Capture beautiful childhood memories with our creative photography."
+          content="Little StudioIn Wedding Stories offers kids & family photography in Nagercoil, Kanyakumari, Trivandrum, Tirunelveli & nearby. Capture precious memories."
+
         />
         <meta
           name="keywords"
@@ -98,7 +97,6 @@ export default function KidsPage() {
             })
           }}
         />
-      </Head>
 
       {/* Page Sections */}
       <main className="bg-white text-black">

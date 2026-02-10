@@ -1,11 +1,9 @@
 // app/galleries/page.tsx
-import Head from "next/head";
 import Galleries from "./index";
 
 export default function GalleryPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>Wedding & Event Gallery | StudioIn Wedding Stories</title>
         <meta
@@ -87,7 +85,6 @@ export default function GalleryPage() {
             })
           }}
         />
-      </Head>
 
       <main className="overflow-hidden">
         <Galleries />

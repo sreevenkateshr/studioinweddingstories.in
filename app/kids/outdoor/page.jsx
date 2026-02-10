@@ -1,14 +1,12 @@
 // app/outdoor/birthday/page.jsx
-import Head from "next/head";
 import BirthdayOutdoorHero from "../outdoor/OutdoorHero";
 import OutdoorPortfolio from "../outdoor/Outportfolio";
 
 export default function BirthdayOutdoorPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
-        <title>Outdoor Birthday Photography | StudioIn Wedding Stories</title>
+        <title>Outdoor Birthday Photography | Little StudioIn Wedding Stories</title>
         <meta
           name="description"
           content="Outdoor birthday photography with creative themes, natural light, garden and beach setups, cake smash shoots, and candid family moments in Nagercoil, Kanyakumari, Trivandrum & Tirunelveli."
@@ -94,7 +92,6 @@ export default function BirthdayOutdoorPage() {
             })
           }}
         />
-      </Head>
 
       {/* Page Sections */}
       <main className="overflow-hidden">
