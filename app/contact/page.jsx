@@ -1,11 +1,9 @@
 // /app/contact/page.tsx
 import ContactContent from "./index"; // your contact page content
-import Head from "next/head";
 
 export default function ContactPage() {
   return (
     <>
-      <Head>
         {/* Basic Meta */}
         <title>Contact Us | StudioIn Wedding Stories Photography</title>
         <meta
@@ -94,7 +92,6 @@ export default function ContactPage() {
             })
           }}
         />
-      </Head>
 
       <ContactContent />
     </>
