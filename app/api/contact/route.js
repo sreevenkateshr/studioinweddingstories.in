@@ -40,7 +40,7 @@ export async function POST(request) {
         <body>
           <div class="container">
             <div class="header">
-              <img src="/logos/sinblacl.png" alt="Studio In Wedding Photography" class="logo">
+              <h1 style="color: #000; margin: 10px 0;">StudioIn Wedding Stories</h1>
               <h1 style="color: #000; margin: 10px 0;">New Contact Inquiry</h1>
             </div>
 
